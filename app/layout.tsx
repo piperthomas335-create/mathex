@@ -1,10 +1,15 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Noto_Sans_SC, Noto_Serif_SC } from 'next/font/google'
+import 'katex/dist/katex.min.css'
 import './globals.css'
 
+const sans = Noto_Sans_SC({ subsets: ['latin'], variable: '--font-app-sans' })
+const serif = Noto_Serif_SC({ subsets: ['latin'], variable: '--font-app-serif' })
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: '数学错题本 · 让错误长成知识',
+  description: '从课堂讲义到知识树与阶梯复习的结构化数学错题本',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -39,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="zh-CN" className="bg-background">
+      <body className={`${sans.variable} ${serif.variable} bg-background font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
