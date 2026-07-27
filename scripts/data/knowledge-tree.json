@@ -1,0 +1,2699 @@
+[
+  {
+    "id": "K01",
+    "name": "集合与常用逻辑用语",
+    "children": [
+      {
+        "id": "K01-01",
+        "name": "集合",
+        "children": [
+          {
+            "id": "K01-01-01",
+            "name": "集合的概念与表示 [教] 必修一1.1",
+            "children": [
+              {
+                "id": "K01-01-01-01",
+                "name": "空集遗忘：讨论关系时忘记 A=∅ [教]",
+                "hasError": false
+              },
+              {
+                "id": "K01-01-01-02",
+                "name": "元素互异性：解出参数未检验重复 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K01-01-02",
+            "name": "集合间的基本关系 [教] 必修一1.2",
+            "hasError": false
+          },
+          {
+            "id": "K01-01-03",
+            "name": "集合的基本运算 [教] 必修一1.3",
+            "children": [
+              {
+                "id": "K01-01-03-01",
+                "name": "交并补混合运算时括号优先级搞错 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K01-02",
+        "name": "常用逻辑用语",
+        "children": [
+          {
+            "id": "K01-02-01",
+            "name": "充分条件与必要条件 [教] 必修一1.4",
+            "children": [
+              {
+                "id": "K01-02-01-01",
+                "name": "充分必要方向混淆（小推大） [教]",
+                "hasError": false
+              },
+              {
+                "id": "K01-02-01-02",
+                "name": "\"p是q的什么条件\"问法方向判断错误 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K01-02-02",
+            "name": "全称量词与存在量词 [教] 必修一1.5",
+            "children": [
+              {
+                "id": "K01-02-02-01",
+                "name": "命题否定：全称/存在互否搞反 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K01-02-02-02",
+                "name": "\"p且q\"的否定写成\"非p且非q\" [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": false
+  },
+  {
+    "id": "K02",
+    "name": "不等式",
+    "children": [
+      {
+        "id": "K02-01",
+        "name": "一元二次不等式",
+        "children": [
+          {
+            "id": "K02-01-01",
+            "name": "不含参二次不等式解法 [教] 必修一2.3",
+            "hasError": false
+          },
+          {
+            "id": "K02-01-02",
+            "name": "含参二次不等式讨论 [教]",
+            "children": [
+              {
+                "id": "K02-01-02-01",
+                "name": "二次项系数为零退化为一次未讨论 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K02-01-02-02",
+                "name": "判别式分类不全（Δ>0/=0/<0） [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K02-01-03",
+            "name": "二次方程根的分布 [教]",
+            "children": [
+              {
+                "id": "K02-01-03-01",
+                "name": "只记Δ≥0，忘端点值和对称轴位置 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K02-02",
+        "name": "基本不等式",
+        "children": [
+          {
+            "id": "K02-02-01",
+            "name": "基本不等式求最值 [教] 必修一2.2",
+            "children": [
+              {
+                "id": "K02-02-01-01",
+                "name": "忘验\"一正二定三相等\" [教]",
+                "hasError": false
+              },
+              {
+                "id": "K02-02-01-02",
+                "name": "负号处理：未提负号变正再套公式 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K02-02-02",
+            "name": "均值不等式链 [教] 82讲-24",
+            "hasError": false
+          },
+          {
+            "id": "K02-02-03",
+            "name": "不等式证明方法 [教] 82讲-24",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K02-03",
+        "name": "其他不等式",
+        "children": [
+          {
+            "id": "K02-03-01",
+            "name": "分式不等式 [教]",
+            "children": [
+              {
+                "id": "K02-03-01-01",
+                "name": "不讨论分母正负直接交叉相乘 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K02-03-02",
+            "name": "绝对值不等式 [教]",
+            "children": [
+              {
+                "id": "K02-03-02-01",
+                "name": "分类讨论漏区间 / 几何意义理解偏差 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K02-03-03",
+            "name": "恒成立问题 [教] 82讲-16",
+            "children": [
+              {
+                "id": "K02-03-03-01",
+                "name": "参数分离后不检验端点 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K02-03-03-02",
+                "name": "主参换位不彻底 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": false
+  },
+  {
+    "id": "K03",
+    "name": "函数与导数",
+    "children": [
+      {
+        "id": "K03-01",
+        "name": "函数概念与性质",
+        "children": [
+          {
+            "id": "K03-01-01",
+            "name": "函数的概念与定义域 [教] 必修一3.1",
+            "children": [
+              {
+                "id": "K03-01-01-01",
+                "name": "复合函数定义域求法：外层定义域≠内层值域 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-01-01-02",
+                "name": "抽象函数定义域：f(x)定义域是x的范围 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-01-02",
+            "name": "函数的单调性 [教] 必修一3.2 / 82讲-2",
+            "children": [
+              {
+                "id": "K03-01-02-01",
+                "name": "单调区间用\"∪\"连接而非\"和\"或\",\" [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-01-02-02",
+                "name": "分段函数单调性：分段点处需比较函数值 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-01-03",
+            "name": "函数的奇偶性 [教] 必修一3.2 / 82讲-3",
+            "children": [
+              {
+                "id": "K03-01-03-01",
+                "name": "只看f(-x)不看定义域是否对称 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-01-03-02",
+                "name": "奇函数在x=0处有定义则f(0)=0的逆用 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-01-04",
+            "name": "函数的周期性 [教] 82讲-4",
+            "children": [
+              {
+                "id": "K03-01-04-01",
+                "name": "f(x+a)=-f(x)周期为2a的推导遗忘 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-01-04-02",
+                "name": "双对称性推周期性搞混 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-01-05",
+            "name": "函数的对称性 [教] 82讲-1",
+            "hasError": false
+          },
+          {
+            "id": "K03-01-06",
+            "name": "函数图象变换 [教]",
+            "children": [
+              {
+                "id": "K03-01-06-01",
+                "name": "平移方向：f(x+a)是左移，f(x)+a是上移 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-01-06-02",
+                "name": "翻折：|f(x)|与f(|x|)图象混淆 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-02",
+        "name": "基本初等函数",
+        "children": [
+          {
+            "id": "K03-02-01",
+            "name": "幂函数 [教] 必修一3.3",
+            "hasError": false
+          },
+          {
+            "id": "K03-02-02",
+            "name": "指数函数 [教] 必修一4.1~4.2 / 82讲-5",
+            "children": [
+              {
+                "id": "K03-02-02-01",
+                "name": "指数运算：a^(m/n)=n次根号下a^m [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-02-03",
+            "name": "对数函数 [教] 必修一4.3~4.4 / 82讲-5",
+            "children": [
+              {
+                "id": "K03-02-03-01",
+                "name": "对数运算性质：log(MN)=logM+logN方向搞反 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-02-03-02",
+                "name": "换底公式：log_a(b)=log_c(b)/log_c(a) [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-02-04",
+            "name": "指对\"六金花\"函数 [教] 82讲-10",
+            "hasError": false
+          },
+          {
+            "id": "K03-02-05",
+            "name": "抽象函数具像化 [教] 高考总复习",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-03",
+        "name": "函数的零点",
+        "children": [
+          {
+            "id": "K03-03-01",
+            "name": "零点存在性定理 [教] 必修一4.5 / 凌晨数学2.1",
+            "children": [
+              {
+                "id": "K03-03-01-01",
+                "name": "f(a)f(b)<0推不出唯一零点（需单调） [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-03-01-02",
+                "name": "找点技术不熟练（放缩/极限） [教] 凌晨数学2.1",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-03-02",
+            "name": "分离参数法求零点个数 [教] 凌晨数学2.2",
+            "hasError": false
+          },
+          {
+            "id": "K03-03-03",
+            "name": "复合方程与根的分布 [教] 82讲-6",
+            "hasError": false
+          },
+          {
+            "id": "K03-03-04",
+            "name": "变号零点与不变号零点 [教] 82讲-18",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-04",
+        "name": "导数的概念与运算",
+        "children": [
+          {
+            "id": "K03-04-01",
+            "name": "导数的定义与几何意义 [教] 选必二5.1",
+            "children": [
+              {
+                "id": "K03-04-01-01",
+                "name": "导数定义：lim[f(x0+h)-f(x0)]/h，h->0方向混淆 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-04-02",
+            "name": "导数的运算法则 [教] 选必二5.2",
+            "children": [
+              {
+                "id": "K03-04-02-01",
+                "name": "乘法法则：(fg)'=f'g+fg'不是f'g' [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-04-02-02",
+                "name": "除法法则：分子是f'g-fg'，减号位置写反 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-04-03",
+            "name": "复合函数求导 [教] 选必二5.2",
+            "children": [
+              {
+                "id": "K03-04-03-01",
+                "name": "链式法则：漏乘内层函数的导数 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-04-04",
+            "name": "求导后因式分解 [教] 82讲-13",
+            "children": [
+              {
+                "id": "K03-04-04-01",
+                "name": "导函数不因式分解，无法判断符号 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-05",
+        "name": "导数应用——切线",
+        "children": [
+          {
+            "id": "K03-05-01",
+            "name": "在某点处的切线 [教] 凌晨数学2.4",
+            "hasError": false
+          },
+          {
+            "id": "K03-05-02",
+            "name": "过某点的切线 [教] 凌晨数学2.4 / 82讲-7",
+            "children": [
+              {
+                "id": "K03-05-02-01",
+                "name": "过某点切线≠在某点处切线 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-05-02-02",
+                "name": "切点未知时设切点(x0,f(x0))建方程 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-05-03",
+            "name": "公切线问题 [教] 凌晨数学2.4 / 82讲-8",
+            "children": [
+              {
+                "id": "K03-05-03-01",
+                "name": "公切线条数=方程组解的个数 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-06",
+        "name": "导数应用——单调性与极值",
+        "children": [
+          {
+            "id": "K03-06-01",
+            "name": "利用导数判断单调性 [教] 选必二5.3",
+            "hasError": false
+          },
+          {
+            "id": "K03-06-02",
+            "name": "极值的判定 [教] 选必二5.3 / 凌晨数学4.4",
+            "children": [
+              {
+                "id": "K03-06-02-01",
+                "name": "极值点 vs f'(x)=0的点（必要不充分） [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-06-02-02",
+                "name": "f'(x0)=0且两侧变号才是极值点 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-06-03",
+            "name": "已知极值点个数求参数 [教] 82讲-9",
+            "hasError": false
+          },
+          {
+            "id": "K03-06-04",
+            "name": "最值问题 [教]",
+            "children": [
+              {
+                "id": "K03-06-04-01",
+                "name": "开区间最值可能在端点趋势处取得",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-07",
+        "name": "导数应用——恒成立与能成立",
+        "children": [
+          {
+            "id": "K03-07-01",
+            "name": "最值分析法 [教] 凌晨数学1.1",
+            "hasError": false
+          },
+          {
+            "id": "K03-07-02",
+            "name": "分离参数法 [教] 凌晨数学1.2",
+            "children": [
+              {
+                "id": "K03-07-02-01",
+                "name": "分离后分母可能为零未排除 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-07-03",
+            "name": "端点效应与必要性探路 [教] 凌晨数学1.3 / 82讲-17",
+            "children": [
+              {
+                "id": "K03-07-03-01",
+                "name": "端点效应只推必要性，未验充分性 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-07-03-02",
+                "name": "f(0)≥0直接下结论，不验证 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-07-04",
+            "name": "恒成立十大方法 [教] 82讲-16",
+            "hasError": true
+          },
+          {
+            "id": "K03-07-05",
+            "name": "Max/Min函数 [教] 82讲-19",
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K03-08",
+        "name": "导数应用——不等式证明",
+        "children": [
+          {
+            "id": "K03-08-01",
+            "name": "直接构造函数证明 [教] 凌晨数学1.4",
+            "hasError": false
+          },
+          {
+            "id": "K03-08-02",
+            "name": "放缩法 [教] 凌晨数学1.4",
+            "children": [
+              {
+                "id": "K03-08-02-01",
+                "name": "常见放缩：e^x≥x+1, lnx≤x-1, sinx≤x等 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-08-02-02",
+                "name": "放缩过度导致方向改变 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-08-03",
+            "name": "对数不等式链 [教] 82讲-12",
+            "hasError": false
+          },
+          {
+            "id": "K03-08-04",
+            "name": "切割线放缩 [教] 凌晨数学3.4",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-09",
+        "name": "导数应用——函数同构",
+        "children": [
+          {
+            "id": "K03-09-01",
+            "name": "同构的基本思想 [教] 凌晨数学1.5",
+            "children": [
+              {
+                "id": "K03-09-01-01",
+                "name": "构造同构函数后忘验单调性和定义域 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-09-02",
+            "name": "指对同构 [教] 凌晨数学1.5",
+            "hasError": false
+          },
+          {
+            "id": "K03-09-03",
+            "name": "双变量同构 [教] 凌晨数学3.5",
+            "hasError": false
+          },
+          {
+            "id": "K03-09-04",
+            "name": "同构视角下多元函数最值 [教] 82讲-11",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-10",
+        "name": "导数应用——隐零点",
+        "children": [
+          {
+            "id": "K03-10-01",
+            "name": "隐零点代换 [教] 凌晨数学2.3",
+            "children": [
+              {
+                "id": "K03-10-01-01",
+                "name": "设出x0后只用f'(x0)=0，不整体代换f(x0) [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-10-02",
+            "name": "隐零点范围估计 [教] 凌晨数学2.5",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-11",
+        "name": "导数应用——双变量问题",
+        "children": [
+          {
+            "id": "K03-11-01",
+            "name": "极值点偏移 [教] 凌晨数学3.1",
+            "children": [
+              {
+                "id": "K03-11-01-01",
+                "name": "对称构造函数后不检验单调性 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K03-11-01-02",
+                "name": "对数均值不等式方向搞反 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-11-02",
+            "name": "双变量极值问题 [教] 凌晨数学3.2",
+            "hasError": false
+          },
+          {
+            "id": "K03-11-03",
+            "name": "主元方法 [教] 凌晨数学1.6/3.3",
+            "hasError": false
+          },
+          {
+            "id": "K03-11-04",
+            "name": "双变量估计 [教] 凌晨数学3.6",
+            "hasError": false
+          },
+          {
+            "id": "K03-11-05",
+            "name": "双变量导数讲义 [教] 82讲-14",
+            "hasError": false
+          },
+          {
+            "id": "K03-11-06",
+            "name": "零点压轴十大微专题 [教] 82讲-15",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K03-12",
+        "name": "导数应用——综合",
+        "children": [
+          {
+            "id": "K03-12-01",
+            "name": "函数与数列综合 [教] 凌晨数学4.1",
+            "hasError": false
+          },
+          {
+            "id": "K03-12-02",
+            "name": "函数与绝对值 [教] 凌晨数学4.2",
+            "hasError": false
+          },
+          {
+            "id": "K03-12-03",
+            "name": "导数与比较大小 [教] 凌晨数学4.3",
+            "children": [
+              {
+                "id": "K03-12-03-01",
+                "name": "不同底/指数比较，不善于构造中间量或构造函数",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K03-12-04",
+            "name": "三次函数性质 [教] 高考总复习",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": true
+  },
+  {
+    "id": "K04",
+    "name": "三角函数与解三角形",
+    "children": [
+      {
+        "id": "K04-01",
+        "name": "任意角与弧度制",
+        "children": [
+          {
+            "id": "K04-01-01",
+            "name": "弧度制与角度制换算 [教] 必修一5.1",
+            "children": [
+              {
+                "id": "K04-01-01-01",
+                "name": "弧度制和角度制混用 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K04-01-02",
+            "name": "象限角与终边相同的角 [教]",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K04-02",
+        "name": "三角函数的概念与公式",
+        "children": [
+          {
+            "id": "K04-02-01",
+            "name": "三角函数定义 [教] 必修一5.2",
+            "hasError": false
+          },
+          {
+            "id": "K04-02-02",
+            "name": "同角三角函数关系 [教]",
+            "children": [
+              {
+                "id": "K04-02-02-01",
+                "name": "sin²α+cos²α=1的正负号选取 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K04-02-03",
+            "name": "诱导公式 [教] 必修一5.3",
+            "children": [
+              {
+                "id": "K04-02-03-01",
+                "name": "奇变偶不变符号看象限用错 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K04-03",
+        "name": "三角恒等变换",
+        "children": [
+          {
+            "id": "K04-03-01",
+            "name": "和差角公式 [教] 必修一5.5 / 82讲-20",
+            "hasError": false
+          },
+          {
+            "id": "K04-03-02",
+            "name": "二倍角公式与降幂公式 [教] 82讲-20",
+            "children": [
+              {
+                "id": "K04-03-02-01",
+                "name": "cos2α三形式的选择（sin²/cos²/1-2sin²） [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K04-03-03",
+            "name": "辅助角公式 [教] 82讲-21",
+            "children": [
+              {
+                "id": "K04-03-03-01",
+                "name": "φ的象限由(a,b)决定，不仅看tanφ [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K04-03-04",
+            "name": "和差化积与积化和差 [教] 82讲-23",
+            "hasError": false
+          },
+          {
+            "id": "K04-03-05",
+            "name": "三角与导数不等式 [教] 82讲-25",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K04-04",
+        "name": "三角函数的图象与性质",
+        "children": [
+          {
+            "id": "K04-04-01",
+            "name": "正弦/余弦/正切函数图象 [教] 必修一5.4",
+            "hasError": false
+          },
+          {
+            "id": "K04-04-02",
+            "name": "周期性、奇偶性、对称性 [教] 82讲-22",
+            "hasError": false
+          },
+          {
+            "id": "K04-04-03",
+            "name": "单调性与最值 [教] 82讲-22",
+            "hasError": false
+          },
+          {
+            "id": "K04-04-04",
+            "name": "y=Asin(ωx+φ)的图象变换 [教] 必修一5.6",
+            "children": [
+              {
+                "id": "K04-04-04-01",
+                "name": "平移方向搞反，需提公因子ω [教]",
+                "hasError": false
+              },
+              {
+                "id": "K04-04-04-02",
+                "name": "先平移后伸缩 vs 先伸缩后平移参数不同 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K04-05",
+        "name": "解三角形",
+        "children": [
+          {
+            "id": "K04-05-01",
+            "name": "正弦定理 [教] 82讲-57",
+            "children": [
+              {
+                "id": "K04-05-01-01",
+                "name": "SSA多解问题漏解或增解 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K04-05-01-02",
+                "name": "未用大边对大角验证 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K04-05-02",
+            "name": "余弦定理 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K04-05-03",
+            "name": "三角形面积公式 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K04-05-04",
+            "name": "解三角形范围问题 [教] 82讲-57",
+            "children": [
+              {
+                "id": "K04-05-04-01",
+                "name": "忘记A+B+C=180°约束 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K04-05-05",
+            "name": "爪型三角形 [教] 82讲-58",
+            "children": [
+              {
+                "id": "K04-05-05-01",
+                "name": "公共边上比例关系混淆 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": true
+          },
+          {
+            "id": "K04-05-06",
+            "name": "解三角形实际应用 [教]",
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      }
+    ],
+    "hasError": true
+  },
+  {
+    "id": "K05",
+    "name": "平面向量与复数",
+    "children": [
+      {
+        "id": "K05-01",
+        "name": "平面向量的概念与运算",
+        "children": [
+          {
+            "id": "K05-01-01",
+            "name": "向量的概念与表示 [教] 必修二6.1",
+            "hasError": false
+          },
+          {
+            "id": "K05-01-02",
+            "name": "向量的加减法 [教] 必修二6.2",
+            "hasError": false
+          },
+          {
+            "id": "K05-01-03",
+            "name": "向量的数乘 [教] 必修二6.2",
+            "hasError": false
+          },
+          {
+            "id": "K05-01-04",
+            "name": "向量的数量积 [教] 必修二6.2 / 82讲-27",
+            "children": [
+              {
+                "id": "K05-01-04-01",
+                "name": "a·b=|a||b|cosθ，投影方向搞反 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K05-01-04-02",
+                "name": "数量积计算六种方式选错 [教] 82讲-27",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K05-01-05",
+            "name": "向量夹角 [教]",
+            "children": [
+              {
+                "id": "K05-01-05-01",
+                "name": "夹角范围[0°,180°]，忽视方向 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K05-02",
+        "name": "平面向量基本定理与坐标",
+        "children": [
+          {
+            "id": "K05-02-01",
+            "name": "平面向量基本定理 [教] 必修二6.3",
+            "children": [
+              {
+                "id": "K05-02-01-01",
+                "name": "向量共线比例与交点分点求解——利用基底表示/等和线/梅涅劳斯求分比 [题] 20260719",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          },
+          {
+            "id": "K05-02-02",
+            "name": "向量的坐标运算 [教]",
+            "children": [
+              {
+                "id": "K05-02-02-01",
+                "name": "平行（比例相等）和垂直（内积=0）混淆 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K05-02-03",
+            "name": "向量在几何中的应用 [教] 必修二6.4",
+            "children": [
+              {
+                "id": "K05-02-03-01",
+                "name": "由向量关系到几何关系的转化 [题] 20260711",
+                "hasError": true
+              },
+              {
+                "id": "K05-02-03-01",
+                "name": "-01 等腰梯形判定——向量条件（平行+模长/对角线）→几何特征对应不佳 [题] 20260711",
+                "hasError": true
+              },
+              {
+                "id": "K05-02-03-01",
+                "name": "-02 向量关系与几何形状互译的一般策略 [题] 20260711",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K05-03",
+        "name": "复数",
+        "children": [
+          {
+            "id": "K05-03-01",
+            "name": "复数的概念 [教] 必修二7.1",
+            "children": [
+              {
+                "id": "K05-03-01-01",
+                "name": "实部与虚部都是实数 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K05-03-02",
+            "name": "复数的四则运算 [教] 必修二7.2",
+            "children": [
+              {
+                "id": "K05-03-02-01",
+                "name": "共轭复数运算性质遗忘 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K05-03-03",
+            "name": "复数的模 [教]",
+            "children": [
+              {
+                "id": "K05-03-03-01",
+                "name": "|z1z2|=|z1||z2|≠|z1+z2|=|z1|+|z2| [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K05-03-04",
+            "name": "复数的三角表示 [教] 必修二7.3",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": true
+  },
+  {
+    "id": "K06",
+    "name": "数列",
+    "children": [
+      {
+        "id": "K06-01",
+        "name": "数列的概念与通项",
+        "children": [
+          {
+            "id": "K06-01-01",
+            "name": "数列的概念 [教] 选必二4.1",
+            "hasError": false
+          },
+          {
+            "id": "K06-01-02",
+            "name": "由Sn求an [教]",
+            "children": [
+              {
+                "id": "K06-01-02-01",
+                "name": "n=1时未单独验证 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K06-01-02-02",
+                "name": "忘记n≥2限制 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K06-01-03",
+            "name": "递推数列求通项 [教]",
+            "children": [
+              {
+                "id": "K06-01-03-01",
+                "name": "累加/累乘法下标范围搞错 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K06-01-03-02",
+                "name": "插入/构造型递推——化为等比数列求通项与速算 [题] 20260711",
+                "hasError": false
+              }
+            ],
+            "hasError": true
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K06-02",
+        "name": "等差数列",
+        "children": [
+          {
+            "id": "K06-02-01",
+            "name": "等差数列定义与通项 [教] 选必二4.2",
+            "hasError": false
+          },
+          {
+            "id": "K06-02-02",
+            "name": "等差中项与前n项和 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K06-02-03",
+            "name": "等差数列的性质 [教]",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K06-03",
+        "name": "等比数列",
+        "children": [
+          {
+            "id": "K06-03-01",
+            "name": "等比数列定义与通项 [教] 选必二4.3",
+            "hasError": false
+          },
+          {
+            "id": "K06-03-02",
+            "name": "等比中项与前n项和 [教]",
+            "children": [
+              {
+                "id": "K06-03-02-01",
+                "name": "q=1时公式不能用，需单独讨论 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K06-03-03",
+            "name": "等比数列的性质 [教]",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K06-04",
+        "name": "数列综合",
+        "children": [
+          {
+            "id": "K06-04-01",
+            "name": "数列放缩 [教] 82讲-59",
+            "children": [
+              {
+                "id": "K06-04-01-01",
+                "name": "放缩过度导致不等式方向改变 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K06-04-01-02",
+                "name": "裂项相消后只剩首尾项条件确认 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K06-04-02",
+            "name": "数列增减项问题 [教] 82讲-60",
+            "children": [
+              {
+                "id": "K06-04-02-01",
+                "name": "插入/删除后下标映射写错 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K06-04-03",
+            "name": "奇偶项数列 [教] 82讲-61",
+            "children": [
+              {
+                "id": "K06-04-03-01",
+                "name": "n奇偶时分段递推混为同一公式 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K06-04-04",
+            "name": "数学归纳法 [教] 选必二4.4",
+            "children": [
+              {
+                "id": "K06-04-04-01",
+                "name": "k→k+1步骤未明确使用归纳假设 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      }
+    ],
+    "hasError": true
+  },
+  {
+    "id": "K07",
+    "name": "立体几何",
+    "children": [
+      {
+        "id": "K07-01",
+        "name": "基本立体图形",
+        "children": [
+          {
+            "id": "K07-01-01",
+            "name": "柱/锥/台/球的结构特征 [教] 必修二8.1",
+            "hasError": false
+          },
+          {
+            "id": "K07-01-02",
+            "name": "直观图（斜二测画法） [教] 必修二8.2",
+            "hasError": false
+          },
+          {
+            "id": "K07-01-03",
+            "name": "表面积与体积 [教] 必修二8.3",
+            "children": [
+              {
+                "id": "K07-01-03-01",
+                "name": "台体体积公式记忆混淆 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-02",
+        "name": "空间位置关系",
+        "children": [
+          {
+            "id": "K07-02-01",
+            "name": "点线面位置关系基础 [教] 必修二8.4 / 凌晨数学1.3",
+            "hasError": false
+          },
+          {
+            "id": "K07-02-02",
+            "name": "线面平行判定与性质 [教] 必修二8.5 / 82讲-70",
+            "children": [
+              {
+                "id": "K07-02-02-01",
+                "name": "五条件缺一不可，\"线在面外\"最易忘 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-02-03",
+            "name": "线面垂直判定与性质 [教] 必修二8.6 / 82讲-71",
+            "children": [
+              {
+                "id": "K07-02-03-01",
+                "name": "垂直于面内两条相交直线，\"相交\"易忘 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-02-04",
+            "name": "面面平行与垂直 [教] 82讲-70/71",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-03",
+        "name": "空间角",
+        "children": [
+          {
+            "id": "K07-03-01",
+            "name": "线线角 [教] 凌晨数学1.4",
+            "hasError": false
+          },
+          {
+            "id": "K07-03-02",
+            "name": "线面角 [教] 凌晨数学1.4 / 82讲-72",
+            "children": [
+              {
+                "id": "K07-03-02-01",
+                "name": "最小角定理 cosθ=cosθ1cosθ2 [教] 凌晨数学1.6",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-03-03",
+            "name": "二面角 [教] 凌晨数学1.5 / 82讲-73",
+            "children": [
+              {
+                "id": "K07-03-03-01",
+                "name": "法向量夹角不一定是二面角（需看方向） [教]",
+                "hasError": false
+              },
+              {
+                "id": "K07-03-03-02",
+                "name": "二面角平面角必须在棱上取点 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-03-04",
+            "name": "空间角比较大小 [教] 凌晨数学1.6",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-04",
+        "name": "空间距离",
+        "children": [
+          {
+            "id": "K07-04-01",
+            "name": "点到面距离（等体积法/向量法） [教] 凌晨数学1.8",
+            "hasError": false
+          },
+          {
+            "id": "K07-04-02",
+            "name": "线到面/面到面距离 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K07-04-03",
+            "name": "异面直线距离 [教]",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-05",
+        "name": "体积计算",
+        "children": [
+          {
+            "id": "K07-05-01",
+            "name": "直接公式法 [教] 凌晨数学1.7",
+            "hasError": false
+          },
+          {
+            "id": "K07-05-02",
+            "name": "割补法 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K07-05-03",
+            "name": "等体积转化 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K07-05-04",
+            "name": "体积计算的五种方法 [教] 凌晨数学1.7",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-06",
+        "name": "球的问题",
+        "children": [
+          {
+            "id": "K07-06-01",
+            "name": "长方体/正方体模型 [教] 凌晨数学2.1",
+            "hasError": false
+          },
+          {
+            "id": "K07-06-02",
+            "name": "补形长方体（墙角模型） [教] 凌晨数学1.9/2.1",
+            "children": [
+              {
+                "id": "K07-06-02-01",
+                "name": "体对角线中点即球心 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-06-03",
+            "name": "直棱柱模型 [教]",
+            "children": [
+              {
+                "id": "K07-06-03-01",
+                "name": "R²=r底²+(h/2)² [教]",
+                "hasError": false
+              },
+              {
+                "id": "K07-06-03-02",
+                "name": "球心在高线中点，不是底面外心 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-06-04",
+            "name": "面面垂直模型 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K07-06-05",
+            "name": "最值模型 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K07-06-06",
+            "name": "内切球 [教] 凌晨数学2.2",
+            "hasError": false
+          },
+          {
+            "id": "K07-06-07",
+            "name": "外接球十二类型 [教] 82讲-73",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-07",
+        "name": "动态与截面",
+        "children": [
+          {
+            "id": "K07-07-01",
+            "name": "展开与折叠 [教] 凌晨数学3.1",
+            "children": [
+              {
+                "id": "K07-07-01-01",
+                "name": "折叠前后不变量未注意 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-07-02",
+            "name": "截面与截线 [教] 凌晨数学3.3",
+            "children": [
+              {
+                "id": "K07-07-02-01",
+                "name": "未找到平面与各棱交点，凭感觉连线 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-07-03",
+            "name": "翻折问题 [教] 凌晨数学3.4",
+            "hasError": false
+          },
+          {
+            "id": "K07-07-04",
+            "name": "旋转过程中空间角处理 [教] 凌晨数学3.5",
+            "hasError": false
+          },
+          {
+            "id": "K07-07-05",
+            "name": "动态空间位置判断 [教] 凌晨数学3.2",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-08",
+        "name": "空间向量",
+        "children": [
+          {
+            "id": "K07-08-01",
+            "name": "空间向量及其运算 [教] 选必一1.1~1.3",
+            "hasError": false
+          },
+          {
+            "id": "K07-08-02",
+            "name": "空间向量在立体几何中的应用 [教] 选必一1.4",
+            "children": [
+              {
+                "id": "K07-08-02-01",
+                "name": "建系不当：z轴不是真正的竖直方向 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K07-08-03",
+            "name": "空间解析几何方法 [教] 凌晨数学3.6 / 82讲-81",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K07-09",
+        "name": "立体几何综合",
+        "children": [
+          {
+            "id": "K07-09-01",
+            "name": "模型思想（补形法/等效思想） [教] 凌晨数学1.9",
+            "hasError": false
+          },
+          {
+            "id": "K07-09-02",
+            "name": "立体几何与解析几何综合 [教] 82讲-74",
+            "hasError": false
+          },
+          {
+            "id": "K07-09-03",
+            "name": "立体几何小题压轴 [教] 82讲-75",
+            "hasError": false
+          },
+          {
+            "id": "K07-09-04",
+            "name": "空间计数与概率 [教] 凌晨数学4.1",
+            "hasError": false
+          },
+          {
+            "id": "K07-09-05",
+            "name": "数学文化背景 [教] 凌晨数学4.2",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": false
+  },
+  {
+    "id": "K08",
+    "name": "解析几何",
+    "children": [
+      {
+        "id": "K08-01",
+        "name": "直线",
+        "children": [
+          {
+            "id": "K08-01-01",
+            "name": "倾斜角与斜率 [教] 选必一2.1",
+            "children": [
+              {
+                "id": "K08-01-01-01",
+                "name": "斜率不存在（竖直直线）忘记讨论 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-01-02",
+            "name": "直线的方程（五种形式） [教] 选必一2.2",
+            "hasError": false
+          },
+          {
+            "id": "K08-01-03",
+            "name": "两直线位置关系 [教] 选必一2.3",
+            "hasError": false
+          },
+          {
+            "id": "K08-01-04",
+            "name": "距离公式（点线距/平行线距） [教]",
+            "hasError": false
+          },
+          {
+            "id": "K08-01-05",
+            "name": "角度变化与距离的几何关系 [题] 20260711",
+            "children": [
+              {
+                "id": "K08-01-05-01",
+                "name": "圆中角度（圆心角/圆周角）变化时对应弦长/点线距的变化规律不清晰 [题] 20260711",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K08-02",
+        "name": "圆",
+        "children": [
+          {
+            "id": "K08-02-01",
+            "name": "圆的方程 [教] 选必一2.4",
+            "hasError": false
+          },
+          {
+            "id": "K08-02-02",
+            "name": "直线与圆的位置关系 [教] 选必一2.5",
+            "hasError": true
+          },
+          {
+            "id": "K08-02-03",
+            "name": "圆与圆的位置关系 [教]",
+            "children": [
+              {
+                "id": "K08-02-03-01",
+                "name": "两圆公共弦方程——两圆方程相减即得公共弦所在直线方程，但需验证两圆是否相交 [题] 20260711",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          },
+          {
+            "id": "K08-02-04",
+            "name": "隐圆问题 [教] 82讲-31",
+            "hasError": false
+          },
+          {
+            "id": "K08-02-05",
+            "name": "圆中最值 [教] 82讲-29",
+            "hasError": false
+          },
+          {
+            "id": "K08-02-06",
+            "name": "阿氏圆与阿氏球 [教] 82讲-30",
+            "hasError": false
+          },
+          {
+            "id": "K08-02-07",
+            "name": "十三\"名圆\" [教] 82讲-28",
+            "hasError": false
+          },
+          {
+            "id": "K08-02-08",
+            "name": "圆的双切线模型 [教] 凌晨数学1.1",
+            "hasError": false
+          },
+          {
+            "id": "K08-02-09",
+            "name": "将军饮马 [教] 82讲-32",
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K08-03",
+        "name": "椭圆",
+        "children": [
+          {
+            "id": "K08-03-01",
+            "name": "椭圆的定义与标准方程 [教] 选必一3.1 / 82讲-33",
+            "children": [
+              {
+                "id": "K08-03-01-01",
+                "name": "焦点在x轴/y轴，a²b²关系不同 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-03-02",
+            "name": "椭圆的几何性质 [教] 凌晨数学1.2",
+            "hasError": false
+          },
+          {
+            "id": "K08-03-03",
+            "name": "椭圆第三定义 [教] 82讲-35",
+            "hasError": false
+          },
+          {
+            "id": "K08-03-04",
+            "name": "焦半径公式 [教] 凌晨数学1.3",
+            "hasError": false
+          },
+          {
+            "id": "K08-03-05",
+            "name": "椭圆的六大定义 [教] 82讲-33",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K08-04",
+        "name": "双曲线",
+        "children": [
+          {
+            "id": "K08-04-01",
+            "name": "双曲线的定义与标准方程 [教] 选必一3.2",
+            "hasError": false
+          },
+          {
+            "id": "K08-04-02",
+            "name": "渐近线 [教] 82讲-36",
+            "children": [
+              {
+                "id": "K08-04-02-01",
+                "name": "渐近线斜率搞反 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K08-04-02-02",
+                "name": "平行渐近线的直线与双曲线只有一个交点≠相切 [教]",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          },
+          {
+            "id": "K08-04-03",
+            "name": "双曲线的几何性质 [教] 凌晨数学1.2",
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K08-05",
+        "name": "抛物线",
+        "children": [
+          {
+            "id": "K08-05-01",
+            "name": "抛物线的定义与标准方程 [教] 选必一3.3",
+            "hasError": false
+          },
+          {
+            "id": "K08-05-02",
+            "name": "焦点弦 [教] 凌晨数学1.9 / 82讲-37",
+            "children": [
+              {
+                "id": "K08-05-02-01",
+                "name": "焦点弦长公式与倾斜角关系记混 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-05-03",
+            "name": "抛物线的切线 [教] 82讲-43",
+            "hasError": false
+          },
+          {
+            "id": "K08-05-04",
+            "name": "阿基米德三角形 [教] 凌晨数学1.10",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K08-06",
+        "name": "综合模型与方法",
+        "children": [
+          {
+            "id": "K08-06-01",
+            "name": "斜率和/积为定值 [教] 凌晨数学1.4 / 82讲-40",
+            "hasError": false
+          },
+          {
+            "id": "K08-06-02",
+            "name": "面积与面积比 [教] 凌晨数学1.5/1.6 / 82讲-38",
+            "children": [
+              {
+                "id": "K08-06-02-01",
+                "name": "S=0.5|AB||CD|sinθ，忘sinθ表达式 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-06-03",
+            "name": "彭赛列闭合定理 [教] 凌晨数学1.7",
+            "hasError": false
+          },
+          {
+            "id": "K08-06-04",
+            "name": "四点共圆 [教] 凌晨数学1.8",
+            "hasError": false
+          },
+          {
+            "id": "K08-06-05",
+            "name": "八大曲线（文化背景） [教] 82讲-34",
+            "hasError": false
+          },
+          {
+            "id": "K08-06-06",
+            "name": "割点现象 [教] 82讲-42",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K08-07",
+        "name": "核心算法",
+        "children": [
+          {
+            "id": "K08-07-01",
+            "name": "解点设线法 [教] 凌晨数学3.1 / 82讲-44",
+            "children": [
+              {
+                "id": "K08-07-01-01",
+                "name": "联立后Δ不检验 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K08-07-01-02",
+                "name": "韦达定理x1+x2和x1x2写反 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-07-02",
+            "name": "设点法 [教] 凌晨数学3.2 / 82讲-46",
+            "hasError": false
+          },
+          {
+            "id": "K08-07-03",
+            "name": "非对称结构处理 [教] 82讲-47",
+            "children": [
+              {
+                "id": "K08-07-03-01",
+                "name": "x1和x2系数不对称时强行用韦达 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K08-07-03-02",
+                "name": "面积比/长度比中的非对称韦达——利用定点或几何关系转化为对称式 [题] 20260711",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          },
+          {
+            "id": "K08-07-04",
+            "name": "双割线同构与双切线同构 [教] 82讲-48",
+            "hasError": false
+          },
+          {
+            "id": "K08-07-05",
+            "name": "齐次化方法 [教] 凌晨数学3.3 / 82讲-49",
+            "children": [
+              {
+                "id": "K08-07-05-01",
+                "name": "平移后忘换回原坐标系 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-07-06",
+            "name": "二次曲线系 [教] 凌晨数学3.5 / 82讲-50",
+            "hasError": false
+          },
+          {
+            "id": "K08-07-07",
+            "name": "参数方程 [教] 凌晨数学3.4 / 82讲-51",
+            "hasError": false
+          },
+          {
+            "id": "K08-07-08",
+            "name": "仿射变换 [教] 82讲-52",
+            "hasError": false
+          },
+          {
+            "id": "K08-07-09",
+            "name": "高等背景解析几何 [教] 82讲-53",
+            "hasError": false
+          },
+          {
+            "id": "K08-07-10",
+            "name": "平面几何证法 [教] 凌晨数学3.6",
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K08-08",
+        "name": "极点极线与射影几何",
+        "children": [
+          {
+            "id": "K08-08-01",
+            "name": "焦点准线 [教] 凌晨数学2.1",
+            "children": [
+              {
+                "id": "K08-08-01-01",
+                "name": "极点极线背景下的角度最值——P在定直线上，∠A₁PA₂最大时P的位置 [题] 20260711",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-08-02",
+            "name": "调和点列 [教] 凌晨数学2.2",
+            "children": [
+              {
+                "id": "K08-08-02-01",
+                "name": "调和点列比例关系方向搞错 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-08-03",
+            "name": "线段比与中点 [教] 凌晨数学2.3",
+            "hasError": false
+          },
+          {
+            "id": "K08-08-04",
+            "name": "斜率等差 [教] 凌晨数学2.4",
+            "hasError": false
+          },
+          {
+            "id": "K08-08-05",
+            "name": "圆过定点 [教] 凌晨数学2.5",
+            "hasError": false
+          },
+          {
+            "id": "K08-08-06",
+            "name": "切线与光学性质 [教] 凌晨数学2.6",
+            "hasError": false
+          },
+          {
+            "id": "K08-08-07",
+            "name": "极点极线八种形式 [教] 82讲-55",
+            "hasError": false
+          },
+          {
+            "id": "K08-08-08",
+            "name": "定点定值 [教]",
+            "children": [
+              {
+                "id": "K08-08-08-01",
+                "name": "消参不彻底，定点坐标依赖参数 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K08-08-09",
+            "name": "圆锥曲线二级结论 [教] 82讲-56",
+            "hasError": false
+          }
+        ],
+        "hasError": true
+      }
+    ],
+    "hasError": true
+  },
+  {
+    "id": "K09",
+    "name": "计数原理",
+    "children": [
+      {
+        "id": "K09-01",
+        "name": "基本计数原理",
+        "children": [
+          {
+            "id": "K09-01-01",
+            "name": "分类加法原理 [教] 选必三6.1",
+            "hasError": false
+          },
+          {
+            "id": "K09-01-02",
+            "name": "分步乘法原理 [教]",
+            "children": [
+              {
+                "id": "K09-01-02-01",
+                "name": "分类（类类独立）与分步（步步相依）搞混 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K09-02",
+        "name": "排列",
+        "children": [
+          {
+            "id": "K09-02-01",
+            "name": "排列的概念与公式 [教] 选必三6.2",
+            "hasError": false
+          },
+          {
+            "id": "K09-02-02",
+            "name": "排列的应用 [教] 概率统计学生版1.1",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K09-03",
+        "name": "组合",
+        "children": [
+          {
+            "id": "K09-03-01",
+            "name": "组合的概念与公式 [教] 选必三6.2",
+            "children": [
+              {
+                "id": "K09-03-01-01",
+                "name": "要不要考虑顺序判断错误 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K09-03-02",
+            "name": "组合数的性质 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K09-03-03",
+            "name": "分组分配问题 [教] 概率统计学生版1.1",
+            "children": [
+              {
+                "id": "K09-03-03-01",
+                "name": "平均分组忘记除以组数阶乘 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K09-03-04",
+            "name": "六大经典题型 [教] 概率统计学生版1.1 / 82讲-63",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K09-04",
+        "name": "二项式定理",
+        "children": [
+          {
+            "id": "K09-04-01",
+            "name": "二项展开式与通项 [教] 选必三6.3 / 概率统计学生版1.2",
+            "children": [
+              {
+                "id": "K09-04-01-01",
+                "name": "二项式系数 vs 项的系数混淆 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K09-04-02",
+            "name": "二项式系数的性质 [教]",
+            "children": [
+              {
+                "id": "K09-04-02-01",
+                "name": "二项式系数最大项 vs 展开式系数最大项不同 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K09-04-03",
+            "name": "杨辉三角形 [教] 概率统计学生版1.3",
+            "children": [
+              {
+                "id": "K09-04-03-01",
+                "name": "C(n,r)+C(n,r+1)=C(n+1,r+1)下标写反 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": false
+  },
+  {
+    "id": "K10",
+    "name": "概率与统计",
+    "children": [
+      {
+        "id": "K10-01",
+        "name": "概率基础",
+        "children": [
+          {
+            "id": "K10-01-01",
+            "name": "样本空间与随机事件 [教] 必修二10.1",
+            "hasError": false
+          },
+          {
+            "id": "K10-01-02",
+            "name": "古典概型 [教] 概率统计学生版2.1",
+            "hasError": false
+          },
+          {
+            "id": "K10-01-03",
+            "name": "频率与概率 [教] 必修二10.3",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K10-02",
+        "name": "事件的关系与运算",
+        "children": [
+          {
+            "id": "K10-02-01",
+            "name": "互斥事件与对立事件 [教] 概率统计学生版2.2",
+            "hasError": false
+          },
+          {
+            "id": "K10-02-02",
+            "name": "事件的独立性 [教] 必修二10.2 / 概率统计学生版2.2",
+            "hasError": false
+          },
+          {
+            "id": "K10-02-03",
+            "name": "加法公式与乘法公式 [教] 概率统计学生版2.3",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K10-03",
+        "name": "条件概率与全概率",
+        "children": [
+          {
+            "id": "K10-03-01",
+            "name": "条件概率 [教] 选必三7.1 / 82讲-65",
+            "children": [
+              {
+                "id": "K10-03-01-01",
+                "name": "P(A|B)=P(AB)/P(B)，分母是条件事件概率 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K10-03-02",
+            "name": "全概率公式 [教] 概率统计学生版2.8",
+            "children": [
+              {
+                "id": "K10-03-02-01",
+                "name": "完备事件组分解不完整 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K10-03-03",
+            "name": "贝叶斯公式 [教] 概率统计学生版2.8",
+            "hasError": false
+          },
+          {
+            "id": "K10-03-04",
+            "name": "条件概率计算四种方法 [教] 82讲-65",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K10-04",
+        "name": "随机变量及其分布",
+        "children": [
+          {
+            "id": "K10-04-01",
+            "name": "离散型随机变量 [教] 选必三7.2",
+            "children": [
+              {
+                "id": "K10-04-01-01",
+                "name": "随机变量定义理解不透彻——非数值属性需先映射为数值才能作为随机变量 [题] 20260711",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          },
+          {
+            "id": "K10-04-02",
+            "name": "分布列 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K10-04-03",
+            "name": "期望与方差 [教] 选必三7.3",
+            "children": [
+              {
+                "id": "K10-04-03-01",
+                "name": "D(aX+b)=a²D(X)，系数是平方 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-04-03-02",
+                "name": "数学期望计算不熟练——加权平均的权重与顺序对应出错 [题] 20260711",
+                "hasError": true
+              }
+            ],
+            "hasError": true
+          }
+        ],
+        "hasError": true
+      },
+      {
+        "id": "K10-05",
+        "name": "常见分布",
+        "children": [
+          {
+            "id": "K10-05-01",
+            "name": "二项分布 [教] 选必三7.4 / 概率统计学生版2.5",
+            "children": [
+              {
+                "id": "K10-05-01-01",
+                "name": "二项分布（有放回）vs 超几何（不放回）混淆 [教] 82讲-64",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K10-05-02",
+            "name": "超几何分布 [教] 概率统计学生版2.5 / 82讲-64",
+            "hasError": false
+          },
+          {
+            "id": "K10-05-03",
+            "name": "正态分布 [教] 选必三7.5 / 概率统计学生版2.10",
+            "children": [
+              {
+                "id": "K10-05-03-01",
+                "name": "3σ原则概率值记错 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-05-03-02",
+                "name": "Z=(X-μ)/σ标准化方向 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K10-06",
+        "name": "概率模型",
+        "children": [
+          {
+            "id": "K10-06-01",
+            "name": "五大赛制 [教] 概率统计学生版2.4",
+            "children": [
+              {
+                "id": "K10-06-01-01",
+                "name": "n局n胜制：最后一场必是胜者 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-06-01-02",
+                "name": "连胜制：不是累计赢局数 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-06-01-03",
+                "name": "比分差控制：终止前分差<n [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-06-01-04",
+                "name": "淘汰制：轮空处理 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-06-01-05",
+                "name": "联赛制：独立事件非条件概率 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K10-06-02",
+            "name": "马尔科夫链 [教] 概率统计学生版2.9 / 82讲-67",
+            "children": [
+              {
+                "id": "K10-06-02-01",
+                "name": "pn=k·pn-1+b化等比，常数项符号写错 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K10-06-02-02",
+                "name": "递推方向搞反 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K10-06-03",
+            "name": "随机游走与赌徒模型 [教] 概率统计学生版2.9",
+            "hasError": false
+          },
+          {
+            "id": "K10-06-04",
+            "name": "极大似然估计 [教] 概率统计学生版2.6 / 82讲-66",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K10-07",
+        "name": "统计",
+        "children": [
+          {
+            "id": "K10-07-01",
+            "name": "随机抽样 [教] 必修二9.1 / 概率统计学生版3.1",
+            "hasError": false
+          },
+          {
+            "id": "K10-07-02",
+            "name": "用样本估计总体 [教] 必修二9.2",
+            "hasError": false
+          },
+          {
+            "id": "K10-07-03",
+            "name": "回归分析 [教] 选必三8.1~8.2 / 概率统计学生版3.2",
+            "hasError": false
+          },
+          {
+            "id": "K10-07-04",
+            "name": "独立性检验 [教] 选必三8.3 / 概率统计学生版3.3",
+            "children": [
+              {
+                "id": "K10-07-04-01",
+                "name": "K²越大相关性越强 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K10-08",
+        "name": "概率统计决策",
+        "children": [
+          {
+            "id": "K10-08-01",
+            "name": "比较期望决策 [教] 概率统计学生版2.11 / 82讲-68",
+            "hasError": false
+          },
+          {
+            "id": "K10-08-02",
+            "name": "比较方差决策 [教]",
+            "children": [
+              {
+                "id": "K10-08-02-01",
+                "name": "高收益看期望，稳定性看方差 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K10-08-03",
+            "name": "构造目标函数决策 [教]",
+            "hasError": false
+          },
+          {
+            "id": "K10-08-04",
+            "name": "概率难题与比赛问题 [教] 82讲-69",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": true
+  },
+  {
+    "id": "K11",
+    "name": "高等背景拓展",
+    "children": [
+      {
+        "id": "K11-01",
+        "name": "极限",
+        "children": [
+          {
+            "id": "K11-01-01",
+            "name": "洛必达法则 [教] 82讲-77",
+            "children": [
+              {
+                "id": "K11-01-01-01",
+                "name": "只适用于0/0或∞/∞型 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K11-01-01-02",
+                "name": "导数比值极限不存在≠原极限不存在 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K11-02",
+        "name": "微分中值定理",
+        "children": [
+          {
+            "id": "K11-02-01",
+            "name": "罗尔定理 [教] 82讲-78",
+            "hasError": false
+          },
+          {
+            "id": "K11-02-02",
+            "name": "拉格朗日中值定理 [教] 82讲-78",
+            "children": [
+              {
+                "id": "K11-02-02-01",
+                "name": "条件不满足时不能使用 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K11-02-03",
+            "name": "柯西中值定理 [教] 82讲-78",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K11-03",
+        "name": "高阶导数与凸凹性",
+        "children": [
+          {
+            "id": "K11-03-01",
+            "name": "高阶导数 [教] 82讲-79",
+            "hasError": false
+          },
+          {
+            "id": "K11-03-02",
+            "name": "凸凹性 [教] 82讲-79",
+            "children": [
+              {
+                "id": "K11-03-02-01",
+                "name": "f''>0是下凸（凹向上），和日常语言\"凸凹\"相反 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K11-03-03",
+            "name": "偏导数 [教] 82讲-79",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K11-04",
+        "name": "定积分",
+        "children": [
+          {
+            "id": "K11-04-01",
+            "name": "定积分概念与计算 [教] 82讲-80",
+            "children": [
+              {
+                "id": "K11-04-01-01",
+                "name": "原函数符号写错 [教]",
+                "hasError": false
+              },
+              {
+                "id": "K11-04-01-02",
+                "name": "换元后积分上下限忘变换 [教]",
+                "hasError": false
+              }
+            ],
+            "hasError": false
+          },
+          {
+            "id": "K11-04-02",
+            "name": "定积分应用（面积/体积） [教] 82讲-80",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K11-05",
+        "name": "数论与密码学",
+        "children": [
+          {
+            "id": "K11-05-01",
+            "name": "数论基础 [教] 82讲-76",
+            "hasError": false
+          },
+          {
+            "id": "K11-05-02",
+            "name": "密码学应用 [教] 82讲-76",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K11-06",
+        "name": "空间解析几何",
+        "children": [
+          {
+            "id": "K11-06-01",
+            "name": "空间解析几何 [教] 82讲-81",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      },
+      {
+        "id": "K11-07",
+        "name": "射影几何",
+        "children": [
+          {
+            "id": "K11-07-01",
+            "name": "射影几何 [教] 82讲-82",
+            "hasError": false
+          },
+          {
+            "id": "K11-07-02",
+            "name": "曲线的曲率 [教] 82讲-82",
+            "hasError": false
+          }
+        ],
+        "hasError": false
+      }
+    ],
+    "hasError": false
+  }
+]
