@@ -11,6 +11,16 @@ import {
   timestamp,
 } from "drizzle-orm/pg-core"
 
+/** 学生/用户表 */
+export const students = pgTable("students", {
+  id: text("id").primaryKey(),
+  name: text("name").notNull(),
+  grade: text("grade").notNull().default("高三"),
+  avatar: text("avatar"),
+  targetScore: integer("target_score").default(130),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+})
+
 /** 知识树节点：11 模块 / 最深 5 层 / 469 节点 */
 export const knNodes = pgTable(
   "kn_nodes",
@@ -30,6 +40,7 @@ export const knNodes = pgTable(
 /** 课堂整理 */
 export const lessons = pgTable("lessons", {
   id: text("id").primaryKey(),
+  studentId: text("student_id"),
   date: text("date").notNull(),
   title: text("title").notNull(),
   outlineMd: text("outline_md"),
@@ -43,6 +54,7 @@ export const lessons = pgTable("lessons", {
 /** 错题：四段式正文 */
 export const errors = pgTable("errors", {
   id: text("id").primaryKey(),
+  studentId: text("student_id"),
   title: text("title").notNull(),
   causeCode: text("cause_code").notNull(),
   difficulty: integer("difficulty").notNull().default(3),
@@ -80,6 +92,7 @@ export const reviews = pgTable(
   "reviews",
   {
     id: serial("id").primaryKey(),
+    studentId: text("student_id"),
     errorId: text("error_id").notNull(),
     stage: integer("stage").notNull().default(1),
     dueDate: date("due_date").notNull(),
@@ -94,6 +107,7 @@ export const reviews = pgTable(
 /** 访客上传的笔记（待审核队列） */
 export const notes = pgTable("notes", {
   id: text("id").primaryKey(),
+  studentId: text("student_id"),
   authorName: text("author_name").notNull(),
   authorNote: text("author_note"),
   kind: text("kind").notNull().default("mixed"),
@@ -117,8 +131,9 @@ export const syntheses = pgTable("syntheses", {
   model: text("model"),
   generatedAt: timestamp("generated_at", { withTimezone: true }).notNull().defaultNow(),
   editedByAdmin: boolean("edited_by_admin").notNull().default(false),
-}) 
+})
 
+export type Student = typeof students.$inferSelect
 export type KnNode = typeof knNodes.$inferSelect
 export type Lesson = typeof lessons.$inferSelect
 export type ErrorRow = typeof errors.$inferSelect

@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_SC, Noto_Serif_SC } from 'next/font/google'
 import 'katex/dist/katex.min.css'
 import './globals.css'
+import { StudentProvider } from '@/components/student-context'
 
 const sans = Noto_Sans_SC({ subsets: ['latin'], variable: '--font-app-sans' })
 const serif = Noto_Serif_SC({ subsets: ['latin'], variable: '--font-app-serif' })
@@ -46,7 +47,9 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className="bg-background">
       <body className={`${sans.variable} ${serif.variable} bg-background font-sans antialiased`}>
-        {children}
+        <StudentProvider>
+          {children}
+        </StudentProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

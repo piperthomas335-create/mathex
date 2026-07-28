@@ -1,8 +1,45 @@
+"use client"
+
 import Image from "next/image"
-import { BookOpen, CheckCircle2, CircleAlert, Route } from "lucide-react"
+import { BookOpen, CheckCircle2, CircleAlert, GraduationCap, Route } from "lucide-react"
+import { MathText } from "@/components/katex-content"
+import { useStudent } from "@/components/student-context"
 import { WorkspaceShell } from "@/components/workspace-shell"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
-export default function LessonsPage() { return <WorkspaceShell><div className="flex flex-col gap-6"><div><p className="text-sm font-medium text-primary">第二章 · 函数</p><h1 className="mt-2 font-serif text-3xl font-semibold">课堂整理</h1><p className="mt-2 text-muted-foreground">把一节课压缩成进展、薄弱点和下一步。</p></div><Card><CardHeader><div className="flex flex-wrap items-center gap-2"><Badge>2026-07-26</Badge><Badge variant="outline">12 页讲义</Badge></div><CardTitle className="mt-3 font-serif text-2xl">函数的概念、性质与基本模型</CardTitle><CardDescription>从定义域到指数方程的一次系统复盘</CardDescription></CardHeader><CardContent><div className="grid gap-6 lg:grid-cols-[240px_1fr]"><Image src="/notes/p19-concept-domain.jpg" alt="函数章节课堂讲义" width={480} height={640} className="h-72 w-full rounded-lg border object-cover object-top" /><div className="grid gap-4 sm:grid-cols-2"><Note icon={BookOpen} title="本课脉络" text="函数概念 → 定义域 → 单调性 → 奇偶性 → 周期与对称 → 二次、幂与指数函数。" /><Note icon={CheckCircle2} title="已经建立" text="能从解析式列出定义域约束；能用差值法证明单调性；会用换元法解指数方程。" /><Note icon={CircleAlert} title="需要加固" text="复合函数中的自变量对应、单调性证明的任意性、两条对称轴推出周期。" /><Note icon={Route} title="下一步" text="先完成 3 道阶梯复习，再从周期与对称节点生成一份方法树。" /></div></div></CardContent></Card></div></WorkspaceShell> }
-function Note({ icon: Icon, title, text }: { icon: React.ElementType; title: string; text: string }) { return <div className="rounded-lg border p-4"><div className="flex items-center gap-2 font-semibold"><Icon className="size-4 text-primary" />{title}</div><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></div> }
+export default function LessonsPage() {
+  const { currentStudent, studentLessons } = useStudent()
+
+  return (
+    <WorkspaceShell>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-sm font-medium text-primary">
+            {currentStudent.name} 同学 · 共 {studentLessons.length} 篇课堂小结
+          </p>
+          <h1 className="mt-2 font-serif text-3xl font-semibold">课堂整理与复盘</h1>
+          <p className="mt-2 text-muted-foreground">把每一节课压缩成进展、薄弱点和下一步行动计划。</p>
+        </div>
+
+        {studentLessons.map((lesson) => (
+          <Card key={lesson.id}>
+            <CardHeader>
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge>{lesson.date}</Badge>
+                <Badge variant="outline"><GraduationCap className="size-3" /> {currentStudent.name}</Badge>
+              </div>
+              <CardTitle className="mt-3 font-serif text-2xl">{lesson.title}</CardTitle>
+              <CardDescription>系统复盘与课堂记录</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-lg border bg-card p-6 text-sm leading-relaxed whitespace-pre-wrap">
+                <MathText text={lesson.content} />
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </WorkspaceShell>
+  )
+}

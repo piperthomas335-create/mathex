@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     if (file instanceof File) {
       bytes = new Uint8Array(await file.arrayBuffer())
       if (process.env.BLOB_READ_WRITE_TOKEN) {
-        const blob = await put(`notes/${noteId}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "-")}`, bytes, { access: "private", contentType: file.type })
+        const blob = await put(`notes/${noteId}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "-")}`, Buffer.from(bytes), { access: "private", contentType: file.type })
         pathname = blob.pathname
       }
     }

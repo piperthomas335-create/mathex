@@ -1,80 +1,121 @@
 "use client"
 
 import { useMemo } from "react"
+import { marked } from "marked"
 import katex from "katex"
 
 /**
- * Renders text that may contain inline ($...$) and block ($$...$$) LaTeX
- * mixed with plain markdown-ish text. Safe: KaTeX throwOnError=false.
+ * Ultra-robust multi-pass Math & Markdown Renderer.
+ * Handles all legacy & modern format variations:
+ * - Block math $$...$$ and \[...\]
+ * - Inline math $...$ and \(...\)
+ * - Unwrapped LaTeX commands in plain text (\vec{AB}, \frac{a}{b}, \sqrt{}, \lambda, \angle, \triangle, \perp, \parallel, etc.)
+ * - Corrupted Unicode vector arrows (AB⃗, AD⃗)
+ * - GFM Markdown headers, tables, lists, bold text, and line breaks
  */
 export function MathText({ text, className }: { text: string; className?: string }) {
-  const html = useMemo(() => renderMixed(text ?? ""), [text])
+  const html = useMemo(() => renderMarkdownWithMath(text ?? ""), [text])
+
   return (
     <div
       className={className}
-      // KaTeX output is trusted (we generate it locally); text is escaped below.
       dangerouslySetInnerHTML={{ __html: html }}
     />
   )
 }
 
-function escapeHtml(s: string) {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
+function preprocessText(input: string): string {
+  if (!input) return ""
+
+  let text = input
+
+  // 1. Clean vector arrow combining characters: AB⃗, AD⃗, a⃗, b⃗
+  text = text.replace(/([A-Za-z0-9]{1,3})[\u20d7⃗]/g, "\\vec{$1}")
+  text = text.replace(/\\\|([^\\|]+)\\\|/g, "|\\vec{$1}|")
+  text = text.replace(/\\\|/g, "|")
+  text = text.replace(/(\\vec\{[^}]+\})\\/g, "$1")
+
+  // 2. Normalize block & inline delimiters: \[...\] -> $$...$$ and \(...\) -> $...$
+  text = text.replace(/\\\[([\s\S]+?)\\\]/g, "$$$$1$$")
+  text = text.replace(/\\\(([\s\S]+?)\\\)/g, "$$1$")
+
+  // 3. Normalize common symbols
+  text = text.replace(/·/g, " \\cdot ")
+  text = text.replace(/≠/g, " \\ne ")
+  text = text.replace(/∥/g, " \\parallel ")
+  text = text.replace(/⟂/g, " \\perp ")
+  text = text.replace(/≥/g, " \\ge ")
+  text = text.replace(/≤/g, " \\le ")
+
+  // 4. Protect existing delimited math ($$...$$ and $...$)
+  const mathPlaceholders: string[] = []
+  let protectedText = text.replace(/\$\$[\s\S]+?\$\$|\$[^$\n]+\$/g, (match) => {
+    const idx = mathPlaceholders.length
+    mathPlaceholders.push(match)
+    return `XKHIDEMATH${idx}XK`
+  })
+
+  // 5. Auto-wrap unwrapped LaTeX commands in text (like \vec{AB}, \frac{1}{2}, \angle A_1PA_2, \triangle ABC, \lambda)
+  protectedText = protectedText.replace(
+    /(\\vec\{[A-Za-z0-9]+\}|\\frac\{[^}]+\}\{[^}]+\}|\\angle\s+[A-Za-z0-9_]+|\\triangle\s+[A-Za-z0-9_]+|\\[a-zA-Z]+(?:\{[^}]*\})*)/g,
+    "$$1$"
+  )
+
+  // Restore protected math
+  protectedText = protectedText.replace(/XKHIDEMATH(\d+)XK/g, (_, idx) => mathPlaceholders[Number(idx)] || "")
+
+  return protectedText
 }
 
-function renderLatex(src: string, displayMode: boolean) {
-  try {
-    return katex.renderToString(src, { displayMode, throwOnError: false, strict: false })
-  } catch {
-    return escapeHtml(src)
-  }
-}
+function renderMarkdownWithMath(input: string): string {
+  if (!input) return ""
 
-/** minimal inline markdown: **bold**, line breaks, bullet lines */
-function renderInlineMarkdown(s: string) {
-  let out = escapeHtml(s)
-  out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-  return out
-}
+  const preprocessed = preprocessText(input)
+  const mathTokens: string[] = []
 
-function renderMixed(input: string): string {
-  const lines = input.split("\n")
-  const blocks: string[] = []
-  let listBuffer: string[] = []
-
-  const flushList = () => {
-    if (listBuffer.length) {
-      blocks.push(`<ul class="katex-list">${listBuffer.map((l) => `<li>${l}</li>`).join("")}</ul>`)
-      listBuffer = []
-    }
-  }
-
-  for (const rawLine of lines) {
-    const line = rawLine.trimEnd()
-    const listMatch = line.match(/^\s*[-*]\s+(.*)$/)
-    const content = listMatch ? listMatch[1] : line
-
-    // split by $$...$$ (block) and $...$ (inline)
-    const rendered = content
-      .split(/(\$\$[^$]+\$\$|\$[^$]+\$)/g)
-      .map((seg) => {
-        if (seg.startsWith("$$") && seg.endsWith("$$")) return renderLatex(seg.slice(2, -2), false)
-        if (seg.startsWith("$") && seg.endsWith("$")) return renderLatex(seg.slice(1, -1), false)
-        return renderInlineMarkdown(seg)
+  // 1. Tokenize block math $$...$$
+  let processed = preprocessed.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => {
+    try {
+      const rendered = katex.renderToString(math.trim(), {
+        displayMode: true,
+        throwOnError: false,
+        strict: false,
       })
-      .join("")
-
-    if (listMatch) {
-      listBuffer.push(rendered)
-    } else {
-      flushList()
-      if (line === "") blocks.push('<div class="katex-gap"></div>')
-      else blocks.push(`<p class="katex-p">${rendered}</p>`)
+      const idx = mathTokens.length
+      mathTokens.push(`<div class="katex-display-block my-4 overflow-x-auto text-center">${rendered}</div>`)
+      return `XKMATHBLOCK${idx}XK`
+    } catch {
+      return `$$${math}$$`
     }
+  })
+
+  // 2. Tokenize inline math $...$
+  processed = processed.replace(/\$([^$\n]+?)\$/g, (_, math) => {
+    try {
+      const rendered = katex.renderToString(math.trim(), {
+        displayMode: false,
+        throwOnError: false,
+        strict: false,
+      })
+      const idx = mathTokens.length
+      mathTokens.push(`<span class="katex-inline-span px-0.5">${rendered}</span>`)
+      return `XKMATHINLINE${idx}XK`
+    } catch {
+      return `$${math}$`
+    }
+  })
+
+  // 3. Parse Markdown using marked
+  let html = ""
+  try {
+    html = marked.parse(processed, { gfm: true, breaks: true }) as string
+  } catch {
+    html = processed
   }
-  flushList()
-  return blocks.join("")
+
+  // 4. Hydrate rendered KaTeX HTML back into tokens
+  html = html.replace(/XKMATHBLOCK(\d+)XK/g, (_, idx) => mathTokens[Number(idx)] || "")
+  html = html.replace(/XKMATHINLINE(\d+)XK/g, (_, idx) => mathTokens[Number(idx)] || "")
+
+  return html
 }

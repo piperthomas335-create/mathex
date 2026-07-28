@@ -1,120 +1,170 @@
-export type ErrorItem = {
+export interface ErrorItem {
   id: string
   title: string
-  cause: "A" | "B" | "C" | "D" | "E"
+  cause: "A" | "B" | "C" | "D" | "E" | "F"
   difficulty: number
   node: string
-  nodeId: string
+  nodeId?: string
   source: string
   statement: string
   wrong: string
   correct: string
   reflection: string
+  due: string
+  reviewCount?: number
+  createdAt?: string
   image?: string
-  due?: string
 }
 
+export interface LessonItem {
+  id: string
+  date: string
+  title: string
+  teacher: string
+  topic: string
+  keyTakeaways: string[]
+  weakness: string
+  actionItem: string
+}
+
+export const causeNames: Record<string, string> = {
+  A: "概念混淆 / 定义域遗漏",
+  B: "计算推导失误",
+  C: "分类讨论遗漏边界",
+  D: "复合法则应用颠倒",
+  E: "代数形变盲目换元",
+  F: "逻辑推导漏洞",
+}
+
+// 徐同学 (std-002) 的全新高品质高考数学错题本 (来源于 C:\Users\mirai\Downloads\temp 真实大一轮复习讲义分析)
 export const sampleErrors: ErrorItem[] = [
   {
-    id: "E-001", title: "函数定义域中的根式与分母约束", cause: "A", difficulty: 2,
-    node: "函数的定义域", nodeId: "K03-01-01", source: "第二章 P19 · 例2",
-    statement: "求函数 $f(x)=\\frac{\\sqrt{x+1}}{x-2}$ 的定义域。",
-    wrong: "只考虑了根号：$x+1\\ge 0$，得到 $[-1,+\\infty)$。",
-    correct: "需同时满足 $x+1\\ge 0$ 且 $x-2\\ne0$，所以定义域为 $[-1,2)\\cup(2,+\\infty)$。",
-    reflection: "定义域约束要逐项列清单：偶次根式非负、分母不为零、对数真数为正。最后取交集。",
-    image: "/notes/p19-concept-domain.jpg", due: "今天"
+    id: "E-1001",
+    title: "抽象复合函数定义域与分式/零次幂限制",
+    cause: "A",
+    difficulty: 4,
+    node: "K03-01-01 函数的概念与定义域",
+    nodeId: "K03-01-01",
+    source: "2026·步步高大一轮复习讲义 P19 例1",
+    statement: "已知函数 $y=f(x)$ 的定义域为 $[0, 4]$，求函数 $y = \\frac{f(x+1)}{\\sqrt{x}-1} + (x-2)^0$ 的定义域。",
+    wrong: "错解分析：直接认为 $0 \\le x+1 \\le 4 \\Rightarrow -1 \\le x \\le 3$，忽略了分母 $\\sqrt{x}-1 \\neq 0$ 以及零次幂底数 $x-2 \\neq 0$ 的限制，导致定义域范围扩大。",
+    correct: "【标准解析】\n1. 由分子 $f(x+1)$ 有意义，得 $0 \\le x+1 \\le 4 \\Rightarrow -1 \\le x \\le 3$；\n2. 由分母有意义，得 $x \\ge 0$ 且 $\\sqrt{x}-1 \\neq 0 \\Rightarrow x \\neq 1$；\n3. 由零次幂 $(x-2)^0$ 有意义，得 $x - 2 \\neq 0 \\Rightarrow x \\neq 2$。\n取交集可得 $x \\in [0, 1) \\cup (1, 2) \\cup (2, 3]$。",
+    reflection: "求函数定义域必须‘全面列出不等式组’：解析式若含二次根式需满足被开方数 $\\ge 0$；分式需满足分母 $\\neq 0$；零次幂需满足底数 $\\neq 0$；抽象复合函数 $f(g(x))$ 需保证 $g(x)$ 的范围落在原函数 $f(u)$ 的定义域内。",
+    due: "今天",
+    reviewCount: 0,
+    createdAt: "2026-07-27T17:08:53.000Z",
   },
   {
-    id: "E-002", title: "复合函数定义域的对应关系", cause: "B", difficulty: 3,
-    node: "复合函数", nodeId: "K03-01-03", source: "第二章 P19 · 例3",
-    statement: "已知 $f(x)$ 的定义域为 $[0,4]$，求 $f(2x-1)$ 的定义域。",
-    wrong: "直接把 $[0,4]$ 当作 $x$ 的范围。",
-    correct: "自变量整体 $2x-1$ 必须落入 $[0,4]$：$0\\le2x-1\\le4$，解得 $\\frac12\\le x\\le\\frac52$。",
-    reflection: "看到 $f(g(x))$ 时，定义域对应的是 $g(x)$ 的取值范围，而不是直接照抄 $f$ 的定义域。",
-    image: "/notes/p19-concept-domain.jpg", due: "明天"
+    id: "E-1002",
+    title: "换元法求解析式未补全新变量定义域",
+    cause: "E",
+    difficulty: 3,
+    node: "K03-01-02 函数解析式的求法",
+    nodeId: "K03-01-02",
+    source: "2026·步步高大一轮复习讲义 P20 跟踪训练2",
+    statement: "已知 $f\\left(x - \\frac{1}{x}\\right) = x^2 + \\frac{1}{x^2}$ ($x \\neq 0$)，求 $f(x)$ 的解析式。",
+    wrong: "错解分析：设 $t = x - \\frac{1}{x}$，由 $t^2 = x^2 - 2 + \\frac{1}{x^2}$ 得 $x^2 + \\frac{1}{x^2} = t^2 + 2$。直接得出 $f(x) = x^2 + 2$，但未检验换元后新自变量 $t$ 的取值范围，遗漏了定义域说明。",
+    correct: "【标准解析】\n设 $t = x - \\frac{1}{x}$ ($x \\neq 0$)。\n对任意 $t \\in \\mathbb{R}$，方程 $x^2 - tx - 1 = 0$ 的判别式 $\\Delta = t^2 + 4 > 0$ 恒成立，说明 $t$ 的取值范围为 $(-\\infty, +\\infty)$。\n由 $t^2 = x^2 - 2 + \\frac{1}{x^2}$，得 $x^2 + \\frac{1}{x^2} = t^2 + 2$。\n故函数解析式为 $f(x) = x^2 + 2$ ($x \\in \\mathbb{R}$)。",
+    reflection: "‘换元必换域’！利用换元法（或配凑法）求函数解析式时，必须严格确定新引入变量 $t$ 的取值范围，并将新范围作为最终解析式 $f(x)$ 的定义域限制。",
+    due: "待计划",
+    reviewCount: 1,
+    createdAt: "2026-07-27T17:08:54.000Z",
   },
   {
-    id: "E-003", title: "分段函数代入边界点", cause: "C", difficulty: 2,
-    node: "分段函数", nodeId: "K03-01-02", source: "第二章 P20 · 例6",
-    statement: "已知 $f(x)=\\begin{cases}x^2+1,&x<1\\\\2x,&x\\ge1\\end{cases}$，求 $f(1)$。",
-    wrong: "代入了第一段，得到 $2$，虽然数值碰巧相同但依据错误。",
-    correct: "$x=1$ 满足 $x\\ge1$，必须使用第二段，$f(1)=2$。",
-    reflection: "分段点先判断归属，再代公式；不要因为结果相同而忽略逻辑。",
-    image: "/notes/p20-analytic-piecewise.jpg", due: "3 天后"
+    id: "E-1003",
+    title: "复合函数‘同增异减’单调区间判定",
+    cause: "D",
+    difficulty: 4,
+    node: "K03-02-01 函数的单调性与最值",
+    nodeId: "K03-02-01",
+    source: "2026·步步高大一轮复习讲义 P22 命题点1",
+    statement: "多选题：下列命题中，正确的是（ ）\nA. 函数 $y = \\mathrm{e}^{-x} - \\frac{1}{x^2}$ 在 $(-\\infty, 0)$ 上单调递减；\nB. 函数 $y = 2|x+1|$ 的单调递减区间是 $(-\\infty, -1]$；\nC. 函数 $y = 2^{-x^2 + 2x + 3}$ 的单调递增区间为 $[1, +\\infty)$；\nD. 函数 $y = 2x + 2\\cos x$ 是增函数。",
+    wrong: "错解分析：误选 C。在分析 $y = 2^{-x^2 + 2x + 3}$ 时，只注意到内层二次函数 $u = -x^2 + 2x + 3$ 的对称轴为 $x=1$，误以为内层递减会导致整体递增，忽略了底数 $a=2 > 1$ 时外层为增函数，复合结果应为‘异减’！",
+    correct: "【标准解析】\n对于 A：在 $(-\\infty, 0)$ 上，$\\mathrm{e}^{-x}$ 递减，$-\\frac{1}{x^2}$ 递减，故整体递减，A 正确；\n对于 B：$y = 2|x+1|$ 在 $(-\\infty, -1]$ 上 $y = -2(x+1)$ 递减，B 正确；\n对于 C：设 $u = -x^2 + 2x + 3 = -(x-1)^2 + 4$。在 $[1, +\\infty)$ 上 $u$ 单调递减。外层 $y = 2^u$ 单调递增。由复合函数‘同增异减’法则，$y$ 在 $[1, +\\infty)$ 上单调递减，C 错误；\n对于 D：$y' = 2 - 2\\sin x \\ge 0$ 恒成立，故为增函数，D 正确。\n故正确选项为 A, B, D。",
+    reflection: "判定复合函数 $y = f(g(x))$ 单调性必须遵循两步法则：第一步求出内层函数 $g(x)$ 的定义域与单调性；第二步结合外层函数 $f(u)$ 的单调性，使用‘同增异减’口诀准确判定。",
+    due: "今天",
+    reviewCount: 0,
+    createdAt: "2026-07-27T17:09:00.000Z",
   },
   {
-    id: "E-004", title: "单调性定义中的任意性", cause: "D", difficulty: 3,
-    node: "函数的单调性", nodeId: "K03-02-01", source: "第二章 P22 · 例2",
-    statement: "用定义证明 $f(x)=x^2$ 在 $[0,+\\infty)$ 上单调递增。",
-    wrong: "仅取 $x_1=1,x_2=2$ 验证 $f(1)<f(2)$。",
-    correct: "任取 $0\\le x_1<x_2$，有 $f(x_2)-f(x_1)=(x_2-x_1)(x_2+x_1)>0$，故递增。",
-    reflection: "单调性证明必须从区间内“任意”两点出发。特殊点只能猜结论，不能完成证明。",
-    image: "/notes/p22-monotonic-proof.jpg", due: "今天"
+    id: "E-1004",
+    title: "抽象函数赋值法与奇偶性综合",
+    cause: "C",
+    difficulty: 4,
+    node: "K03-02-02 函数的奇偶性与对称性",
+    nodeId: "K03-02-02",
+    source: "2026·步步高大一轮复习讲义 P25 跟踪训练1",
+    statement: "已知定义在 $\\mathbb{R}$ 上的奇函数 $f(x)$ 满足 $f(x_1 + x_2) = f(x_1) + f(x_2)$。若 $f(1) + g(-2) = -1$，且 $g(x) = 2^x + x^3$，求 $f(1)$ 的值。",
+    wrong: "错解分析：在计算 $g(-2)$ 时出现计算粗心，将 $2^{-2}$ 误算为 $-4$，且未能灵活利用 $f(x_1 + x_2) = f(x_1) + f(x_2)$ 推导出正比例函数 $f(x) = cx$ 的性质。",
+    correct: "【标准解析】\n1. 计算 $g(-2)$：$g(-2) = 2^{-2} + (-2)^3 = \\frac{1}{4} - 8 = -\\frac{31}{4}$；\n2. 代入已知等式 $f(1) + g(-2) = -1$：\n   $f(1) - \\frac{31}{4} = -1 \\Rightarrow f(1) = \\frac{27}{4}$。\n（注：由 $f(x_1+x_2)=f(x_1)+f(x_2)$ 可推得 $f(x) = f(1)x = \\frac{27}{4}x$）。",
+    reflection: "抽象函数问题核心在于‘赋值法’（令 $x_1=x_2=0$ 或 $x_2=-x_1$）。计算已知具体函数值（如 $g(-2)$）时需特别警惕负指数幂与奇数次幂的正负号！",
+    due: "待计划",
+    reviewCount: 0,
+    createdAt: "2026-07-27T17:09:05.000Z",
   },
   {
-    id: "E-005", title: "奇偶函数定义域的对称性", cause: "B", difficulty: 2,
-    node: "函数的奇偶性", nodeId: "K03-02-02", source: "第二章 P25 · 例1",
-    statement: "判断 $f(x)=\\sqrt{x}$ 的奇偶性。",
-    wrong: "计算 $f(-x)\\ne f(x)$，判为非偶函数，却没检查定义域。",
-    correct: "定义域 $[0,+\\infty)$ 不关于原点对称，因此函数既非奇函数也非偶函数。",
-    reflection: "判断奇偶性的第一步永远是检查定义域是否关于原点对称。",
-    image: "/notes/p25-parity.jpg", due: "7 天后"
+    id: "E-1005",
+    title: "周期性与奇偶性结合的大数求值",
+    cause: "B",
+    difficulty: 4,
+    node: "K03-02-03 函数的周期性与对称性",
+    nodeId: "K03-02-03",
+    source: "2026·步步高大一轮复习讲义 P27 跟踪训练1",
+    statement: "已知定义在 $\\mathbb{R}$ 上的奇函数 $f(x)$ 满足 $f(x-3) = -f(x)$。当 $x \\in [0, 3]$ 时，$f(x) = x^2 - 3x$。求 $f(2023) + f(2025) - f(2024)$ 的值。",
+    wrong: "错解分析：错把周期推导为 $T=3$。由 $f(x-3)=-f(x)$ 推出 $f(x-6)=f(x)$，周期应为 $T=6$。在用 6 取模缩减自变量时出现正负号化简失误。",
+    correct: "【标准解析】\n1. 周期推导：由 $f(x-3) = -f(x)$，得 $f(x-6) = -f(x-3) = f(x)$，故最小正周期 $T = 6$；\n2. 2024 取模：$2024 = 6 \\times 337 + 2 \\Rightarrow f(2024) = f(2) = 2^2 - 3(2) = -2$；\n3. 2023 取模：$2023 = 6 \\times 337 + 1 \\Rightarrow f(2023) = f(1) = 1 - 3 = -2$；\n4. 2025 取模：$2025 = 6 \\times 337 + 3 \\Rightarrow f(2025) = f(3) = 3^2 - 3(3) = 0$；\n代入计算：$f(2023) + f(2025) - f(2024) = -2 + 0 - (-2) = 0$。",
+    reflection: "周期性求大数函数值的标准流程：① 寻找递推公式推出周期 $T$；② 用 $x \\bmod T$ 将大数自变量化简至已知解析式的定义区间（如 $[0, 3]$）；③ 若落入负区间，利用奇偶性 $f(-x)=-f(x)$ 翻转回正区间求解。",
+    due: "今天",
+    reviewCount: 1,
+    createdAt: "2026-07-27T17:09:10.000Z",
   },
   {
-    id: "E-006", title: "周期与对称轴的转化", cause: "E", difficulty: 4,
-    node: "周期性与对称性", nodeId: "K03-02-03", source: "第二章 P27 · 例4",
-    statement: "若 $f(x)$ 的图像关于直线 $x=1$ 与 $x=3$ 对称，求其一个周期。",
-    wrong: "认为两条对称轴距离 $2$ 就是周期。",
-    correct: "两条平行对称轴的距离为 $2$，连续两次轴对称等价于平移距离的两倍，故 $T=4$。",
-    reflection: "两条对称轴 $x=a,x=b$ 推出周期 $T=2|b-a|$；先画图再写公式。",
-    image: "/notes/p27-period-symmetry.jpg", due: "今天"
+    id: "E-1006",
+    title: "二次函数在动区间 $[0, m]$ 上的值域与边界",
+    cause: "C",
+    difficulty: 4,
+    node: "K03-04-02 二次函数的性质与最值",
+    nodeId: "K03-04-02",
+    source: "2026·步步高大一轮复习讲义 P31 跟踪训练3",
+    statement: "已知函数 $f(x) = x^2 - 2x + 3$ 在闭区间 $[0, m]$ 上的值域是 $[2, 3]$，求实数 $m$ 的取值范围。",
+    wrong: "错解分析：错选为 $(0, 2]$。只考虑到 $x=2$ 时 $f(2)=3$，忽略了要取得最小值 $2$，右端点 $m$ 必须达到或跨过顶点 $x=1$（即 $m \\ge 1$）！",
+    correct: "【标准解析】\n二次函数配方得 $f(x) = (x-1)^2 + 2$，对称轴为直线 $x = 1$，顶点最小值为 $f(1) = 2$。\n1. 为使最小值达到 $2$，区间 $[0, m]$ 必须包含顶点 $x = 1$，故 $m \\ge 1$；\n2. 端点处 $f(0) = 3$。由对称性，当 $x = 2$ 时，$f(2) = 3$。为使最大值不超过 $3$，右端点 $m$ 不能超过 $2$，即 $m \\le 2$。\n综上所述，实数 $m$ 的取值范围是 $[1, 2]$。",
+    reflection: "二次函数在动区间 $[a, b]$ 上的值域问题，必须‘画图看两点’：一是对称轴与区间的相对位置关系（是否包含顶点最小值/最大值）；二是端点函数值的大小关系（比较 $f(a)$ 与 $f(b)$）。",
+    due: "待计划",
+    reviewCount: 0,
+    createdAt: "2026-07-27T17:09:16.000Z",
   },
   {
-    id: "E-007", title: "二次函数最值与定义域", cause: "A", difficulty: 3,
-    node: "二次函数", nodeId: "K03-04-02", source: "第二章 P31 · 例5",
-    statement: "求 $f(x)=x^2-4x+5$ 在 $[0,3]$ 上的值域。",
-    wrong: "只算两端点，得到 $[2,5]$。",
-    correct: "$f(x)=(x-2)^2+1$，顶点 $x=2$ 在区间内；最小值 $1$，端点最大值 $5$，值域 $[1,5]$。",
-    reflection: "闭区间二次函数最值要比较：两个端点 + 区间内的顶点。",
-    image: "/notes/p31-quadratic-graph.jpg", due: "14 天后"
-  },
-  {
-    id: "E-008", title: "指数方程中的同底转化", cause: "C", difficulty: 3,
-    node: "指数函数", nodeId: "K03-05-02", source: "第二章 P35 · 例3",
-    statement: "解方程 $4^x-5\\cdot2^x+4=0$。",
-    wrong: "直接尝试把每项取对数，无法继续。",
-    correct: "令 $t=2^x>0$，得 $t^2-5t+4=0$，所以 $t=1$ 或 $4$，即 $x=0$ 或 $2$。",
-    reflection: "看到 $a^{2x}$ 与 $a^x$ 共存，优先令 $t=a^x>0$，转成一元二次方程。",
-    image: "/notes/p35-exp-equation.jpg", due: "3 天后"
+    id: "E-1007",
+    title: "对数复合函数定义域、奇偶性与单调性",
+    cause: "A",
+    difficulty: 4,
+    node: "K03-05-02 对数函数的性质与综合应用",
+    nodeId: "K03-05-02",
+    source: "2026·步步高大一轮复习讲义 P37 跟踪训练3",
+    statement: "多选题：已知函数 $f(x) = \\lg\\left(\\frac{2}{1-x} - 1\\right)$，下列说法中正确的有（ ）\nA. $f(x)$ 的定义域为 $(-1, 1)$；\nB. $f(x)$ 的图象关于 $y$ 轴对称；\nC. $f(x)$ 的图象关于原点对称；\nD. $f(x)$ 在 $(0, 1)$ 上单调递增。",
+    wrong: "错解分析：错选了 B。化简真数时漏掉了真数必须大于 0 的基本条件，导致奇偶性判断把 $f(-x) = -f(x)$ 错记为偶函数。",
+    correct: "【标准解析】\n1. 化简真数：$u(x) = \\frac{2}{1-x} - 1 = \\frac{1+x}{1-x}$；\n2. 真数需满足 $\\frac{1+x}{1-x} > 0 \\iff (1+x)(1-x) > 0 \\iff x \\in (-1, 1)$，故 A 正确；\n3. 奇偶性验证：$f(-x) = \\lg\\left(\\frac{1-x}{1+x}\\right) = \\lg\\left(\\frac{1+x}{1-x}\\right)^{-1} = -f(x)$，故 $f(x)$ 为奇函数，图象关于原点对称，C 正确，B 错误；\n4. 单调性验证：在 $(0, 1)$ 上，$u(x) = -1 + \\frac{2}{1-x}$ 递增，外层对数底数 $10 > 1$ 递增，故 $f(x)$ 在 $(0, 1)$ 上单调递增，D 正确。\n故正确选项为 A, C, D。",
+    reflection: "对数函数综合题‘真数优先’！求解任何对数相关问题，第一步永远是解不等式 $u(x) > 0$ 确定定义域。化简分式对数 $\\lg\\left(\\frac{1+x}{1-x}\\right)$ 是经典奇函数模型，需熟记 $f(-x) = -f(x)$ 的对数变轨关系。",
+    due: "今天",
+    reviewCount: 1,
+    createdAt: "2026-07-28T11:05:35.000Z",
   },
 ]
 
-export const causeNames = { A: "概念边界", B: "条件遗漏", C: "运算路径", D: "论证不严", E: "模型迁移" }
-
-export const moduleStats = [
-  { id: "K01", name: "集合与常用逻辑用语", count: 31, mastery: 84 },
-  { id: "K02", name: "一元二次函数与方程", count: 38, mastery: 76 },
-  { id: "K03", name: "函数与导数", count: 100, mastery: 62 },
-  { id: "K04", name: "三角函数", count: 62, mastery: 71 },
-  { id: "K05", name: "平面向量", count: 37, mastery: 88 },
-  { id: "K06", name: "数列", count: 42, mastery: 69 },
-  { id: "K07", name: "立体几何", count: 50, mastery: 79 },
-  { id: "K08", name: "解析几何", count: 55, mastery: 67 },
-  { id: "K09", name: "概率与统计", count: 54, mastery: 82 },
-]
-
-export const functionNodes = [
-  { id: "K03-01", name: "函数的概念与性质", level: 1, mastery: 64, errors: 3 },
-  { id: "K03-01-01", name: "函数的定义域", level: 2, mastery: 58, errors: 2 },
-  { id: "K03-01-02", name: "函数的解析式与分段函数", level: 2, mastery: 72, errors: 1 },
-  { id: "K03-01-03", name: "复合函数", level: 2, mastery: 55, errors: 1 },
-  { id: "K03-02", name: "函数的基本性质", level: 1, mastery: 51, errors: 3 },
-  { id: "K03-02-01", name: "函数的单调性", level: 2, mastery: 45, errors: 1 },
-  { id: "K03-02-02", name: "函数的奇偶性", level: 2, mastery: 64, errors: 1 },
-  { id: "K03-02-03", name: "周期性与对称性", level: 2, mastery: 42, errors: 1 },
-  { id: "K03-03", name: "幂函数", level: 1, mastery: 76, errors: 0 },
-  { id: "K03-04", name: "二次函数", level: 1, mastery: 68, errors: 1 },
-  { id: "K03-05", name: "指数函数与对数函数", level: 1, mastery: 73, errors: 1 },
-  { id: "K03-05-02", name: "指数方程与不等式", level: 2, mastery: 61, errors: 1 },
-  { id: "K03-06", name: "导数及其应用", level: 1, mastery: 80, errors: 0 },
+export const sampleLessons: LessonItem[] = [
+  {
+    id: "L-001",
+    date: "2026-07-27",
+    title: "函数概念与基本性质一轮复习",
+    teacher: "张老师",
+    topic: "函数的定义域、解析式与奇偶对称性",
+    keyTakeaways: [
+      "求抽象复合函数定义域需全面列出不等式组，包含分母、根号与零次幂",
+      "换元法求解析式必换域，新变量范围作为解析式限制",
+      "复合函数单调性严格遵守‘同增异减’法则",
+    ],
+    weakness: "复合函数单调区间分析时容易混淆内层自变量与整体定义域。",
+    actionItem: "完成步步高讲义 P19-37 的错题二次重做与变式演练。",
+  },
 ]
