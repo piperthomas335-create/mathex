@@ -4,6 +4,8 @@ import { z } from "zod"
 
 const schema = z.object({ title: z.string(), methodTree: z.array(z.string()), pitfalls: z.array(z.string()), template: z.string() })
 
+export const dynamic = "force-static"
+
 export async function POST(request: Request) {
   if (!process.env.AI_GATEWAY_API_KEY) return NextResponse.json({ available: false, error: "AI 当前不可用，手工复习不受影响" }, { status: 503 })
   try {

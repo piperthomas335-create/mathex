@@ -14,6 +14,10 @@ import { causeNames, sampleErrors } from "@/lib/sample-data"
 import { wangErrors } from "@/lib/student-data-provider"
 import { getDaysAgo } from "@/lib/utils"
 
+export function generateStaticParams() {
+  return [...liShangdaErrors, ...sampleErrors, ...wangErrors].map((e) => ({ id: e.id }))
+}
+
 export default async function ErrorDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const item = [...liShangdaErrors, ...sampleErrors, ...wangErrors].find((e) => e.id === id)

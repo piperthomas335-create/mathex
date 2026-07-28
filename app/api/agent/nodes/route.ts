@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { fullTreeData, getFlattenedNodes, searchTreeNodes } from "@/lib/full-tree-data"
 
+export const dynamic = "force-static"
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const query = searchParams.get("q") || ""

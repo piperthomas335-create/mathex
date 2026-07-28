@@ -3,6 +3,8 @@ import { db } from "@/lib/db"
 import { errorNodes, errors, notes } from "@/lib/db/schema"
 import { sampleErrors } from "@/lib/sample-data"
 
+export const dynamic = "force-static"
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()

@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { ADMIN_COOKIE, adminCookieValue, verifyPasscode } from "@/lib/admin-auth"
 
+export const dynamic = "force-static"
+
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null)
   const passcode = typeof body?.passcode === "string" ? body.passcode : ""

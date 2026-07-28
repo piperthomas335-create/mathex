@@ -17,6 +17,8 @@ const draftSchema = z.object({
   suggestedNodes: z.array(z.object({ name: z.string(), confidence: z.number().min(0).max(1) })).max(4),
 })
 
+export const dynamic = "force-static"
+
 export async function POST(request: Request) {
   try {
     const form = await request.formData()

@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import fs from "fs"
 import path from "path"
 
+export const dynamic = "force-static"
+
 const LOG_FILE = path.join(process.cwd(), "lib", "db", "review-logs.json")
 
 export async function GET(request: Request) {

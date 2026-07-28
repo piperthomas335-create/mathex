@@ -2,6 +2,8 @@ import { get } from "@vercel/blob"
 import { NextResponse } from "next/server"
 import { isAdmin } from "@/lib/admin-auth"
 
+export const dynamic = "force-static"
+
 export async function GET(request: Request) {
   if (!(await isAdmin())) return NextResponse.json({ error: "未授权" }, { status: 401 })
   const pathname = new URL(request.url).searchParams.get("pathname")

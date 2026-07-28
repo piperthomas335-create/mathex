@@ -12,6 +12,8 @@ const decisionSchema = z.object({
   nodeId: z.string().min(2).max(80).optional(),
 })
 
+export const dynamic = "force-static"
+
 export async function GET() {
   if (!(await isAdmin())) return NextResponse.json({ error: "未授权" }, { status: 401 })
   const queue = await db.select().from(notes).where(eq(notes.status, "pending")).orderBy(desc(notes.createdAt))
