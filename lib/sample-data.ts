@@ -14,6 +14,7 @@ export interface ErrorItem {
   reviewCount?: number
   createdAt?: string
   image?: string
+  images?: string[]
 }
 
 export interface LessonItem {
@@ -53,6 +54,7 @@ export const sampleErrors: ErrorItem[] = [
     due: "今天",
     reviewCount: 0,
     createdAt: "2026-07-27T17:08:53.000Z",
+    image: "p19-concept-domain.jpg",
   },
   {
     id: "E-1002",
@@ -69,6 +71,7 @@ export const sampleErrors: ErrorItem[] = [
     due: "待计划",
     reviewCount: 1,
     createdAt: "2026-07-27T17:08:54.000Z",
+    image: "p20-analytic-piecewise.jpg",
   },
   {
     id: "E-1003",
@@ -79,12 +82,13 @@ export const sampleErrors: ErrorItem[] = [
     nodeId: "K03-02-01",
     source: "2026·步步高大一轮复习讲义 P22 命题点1",
     statement: "多选题：下列命题中，正确的是（ ）\nA. 函数 $y = \\mathrm{e}^{-x} - \\frac{1}{x^2}$ 在 $(-\\infty, 0)$ 上单调递减；\nB. 函数 $y = 2|x+1|$ 的单调递减区间是 $(-\\infty, -1]$；\nC. 函数 $y = 2^{-x^2 + 2x + 3}$ 的单调递增区间为 $[1, +\\infty)$；\nD. 函数 $y = 2x + 2\\cos x$ 是增函数。",
-    wrong: "错解分析：误选 C。在分析 $y = 2^{-x^2 + 2x + 3}$ 时，只注意到内层二次函数 $u = -x^2 + 2x + 3$ 的对称轴为 $x=1$，误以为内层递减会导致整体递增，忽略了底数 $a=2 > 1$ 时外层为增函数，复合结果应为‘异减’！",
+    wrong: "错解分析：错选 C。在分析 $y = 2^{-x^2 + 2x + 3}$ 时，只注意到内层二次函数 $u = -x^2 + 2x + 3$ 的对称轴为 $x=1$，误以为内层递减会导致整体递增，忽略了底数 $a=2 > 1$ 时外层为增函数，复合结果应为‘异减’！",
     correct: "【标准解析】\n对于 A：在 $(-\\infty, 0)$ 上，$\\mathrm{e}^{-x}$ 递减，$-\\frac{1}{x^2}$ 递减，故整体递减，A 正确；\n对于 B：$y = 2|x+1|$ 在 $(-\\infty, -1]$ 上 $y = -2(x+1)$ 递减，B 正确；\n对于 C：设 $u = -x^2 + 2x + 3 = -(x-1)^2 + 4$。在 $[1, +\\infty)$ 上 $u$ 单调递减。外层 $y = 2^u$ 单调递增。由复合函数‘同增异减’法则，$y$ 在 $[1, +\\infty)$ 上单调递减，C 错误；\n对于 D：$y' = 2 - 2\\sin x \\ge 0$ 恒成立，故为增函数，D 正确。\n故正确选项为 A, B, D。",
     reflection: "判定复合函数 $y = f(g(x))$ 单调性必须遵循两步法则：第一步求出内层函数 $g(x)$ 的定义域与单调性；第二步结合外层函数 $f(u)$ 的单调性，使用‘同增异减’口诀准确判定。",
     due: "今天",
     reviewCount: 0,
     createdAt: "2026-07-27T17:09:00.000Z",
+    image: "p22-monotonic-proof.jpg",
   },
   {
     id: "E-1004",
@@ -101,6 +105,7 @@ export const sampleErrors: ErrorItem[] = [
     due: "待计划",
     reviewCount: 0,
     createdAt: "2026-07-27T17:09:05.000Z",
+    image: "p25-parity.jpg",
   },
   {
     id: "E-1005",
@@ -117,6 +122,7 @@ export const sampleErrors: ErrorItem[] = [
     due: "今天",
     reviewCount: 1,
     createdAt: "2026-07-27T17:09:10.000Z",
+    image: "p27-period-symmetry.jpg",
   },
   {
     id: "E-1006",
@@ -133,6 +139,7 @@ export const sampleErrors: ErrorItem[] = [
     due: "待计划",
     reviewCount: 0,
     createdAt: "2026-07-27T17:09:16.000Z",
+    image: "p31-quadratic-graph.jpg",
   },
   {
     id: "E-1007",
@@ -149,6 +156,7 @@ export const sampleErrors: ErrorItem[] = [
     due: "今天",
     reviewCount: 1,
     createdAt: "2026-07-28T11:05:35.000Z",
+    image: "p35-exp-equation.jpg",
   },
 ]
 

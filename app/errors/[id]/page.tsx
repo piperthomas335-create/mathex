@@ -19,10 +19,24 @@ export function generateStaticParams() {
   return [...liShangdaErrors, ...sampleErrors, ...wangErrors, ...liGuobinErrors].map((e) => ({ id: e.id }))
 }
 
+function getRelativeImageUrl(imgName: string) {
+  if (!imgName) return ""
+  if (imgName.startsWith("http://") || imgName.startsWith("https://")) return imgName
+  const path = imgName.startsWith("/") ? imgName : `/notes/${imgName}`
+  const prefix = process.env.NODE_ENV === "production" ? "/mathex" : ""
+  return `${prefix}${path}`
+}
+
 export default async function ErrorDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const item = [...liShangdaErrors, ...sampleErrors, ...wangErrors, ...liGuobinErrors].find((e) => e.id === id)
   if (!item) notFound()
+
+  const rawImages = item.images && item.images.length > 0
+    ? item.images
+    : item.image
+    ? [item.image]
+    : []
 
   return (
     <WorkspaceShell>
@@ -81,12 +95,18 @@ export default async function ErrorDetailPage({ params }: { params: Promise<{ id
 
           <aside className="flex flex-col gap-4">
             <Card>
-              <CardHeader><CardTitle className="text-base">原始讲义截图</CardTitle></CardHeader>
-              <CardContent>
-                {item.image ? (
-                  <div className="overflow-hidden rounded-lg border bg-muted">
-                    <img src={item.image.startsWith("/") ? item.image : `/notes/${item.image}`} alt={`${item.title}的讲义截图`} className="h-auto w-full object-contain max-h-96" />
-                  </div>
+              <CardHeader><CardTitle className="text-base">原始讲义与手写解答截图</CardTitle></CardHeader>
+              <CardContent className="flex flex-col gap-3">
+                {rawImages.length > 0 ? (
+                  rawImages.map((imgSrc, idx) => (
+                    <div key={idx} className="overflow-hidden rounded-lg border bg-muted p-1">
+                      <img
+                        src={getRelativeImageUrl(imgSrc)}
+                        alt={`${item.title} 截图 ${idx + 1}`}
+                        className="h-auto w-full object-contain max-h-96"
+                      />
+                    </div>
+                  ))
                 ) : (
                   <div className="py-8 text-center text-xs text-muted-foreground bg-muted rounded-md">
                     无讲义截图附件

@@ -16,6 +16,8 @@ export const liGuobinErrors: ErrorItem[] = [
     due: "今天",
     reviewCount: 0,
     createdAt: "2026-07-28T21:05:00.000Z",
+    image: "e2001-guobin-problem.png",
+    images: ["e2001-guobin-problem.png", "e2001-guobin-solution.jpg"],
   },
 ]
 
