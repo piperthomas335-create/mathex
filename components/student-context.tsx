@@ -21,6 +21,7 @@ export type StudentItem = {
 export const defaultStudents: StudentItem[] = [
   { id: "std-001", name: "李尚达", targetScore: 142 },
   { id: "std-002", name: "徐同学", targetScore: 125 },
+  { id: "std-004", name: "李郭彬", targetScore: 130 },
 ]
 
 type StudentContextType = {

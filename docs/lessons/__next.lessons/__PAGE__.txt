@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[97086,["/mathex/_next/static/chunks/0w0sw--4uu27q.js","/mathex/_next/static/chunks/0m80jxcxmqkt4.js","/mathex/_next/static/chunks/02xn8b_pzqxjq.js"],"ClientPageRoot"]
-3:I[35327,["/mathex/_next/static/chunks/0w0sw--4uu27q.js","/mathex/_next/static/chunks/0m80jxcxmqkt4.js","/mathex/_next/static/chunks/02xn8b_pzqxjq.js","/mathex/_next/static/chunks/01~fk5y48dqv~.js","/mathex/_next/static/chunks/0qhxga3i383zh.js","/mathex/_next/static/chunks/0vv3t685s0kvs.js"],"default"]
-6:I[54439,["/mathex/_next/static/chunks/0w0sw--4uu27q.js","/mathex/_next/static/chunks/0m80jxcxmqkt4.js","/mathex/_next/static/chunks/02xn8b_pzqxjq.js"],"OutletBoundary"]
+2:I[97086,["/mathex/_next/static/chunks/0w0sw--4uu27q.js","/mathex/_next/static/chunks/0m80jxcxmqkt4.js","/mathex/_next/static/chunks/0l4y30ghpviv0.js"],"ClientPageRoot"]
+3:I[35327,["/mathex/_next/static/chunks/0w0sw--4uu27q.js","/mathex/_next/static/chunks/0m80jxcxmqkt4.js","/mathex/_next/static/chunks/0l4y30ghpviv0.js","/mathex/_next/static/chunks/01~fk5y48dqv~.js","/mathex/_next/static/chunks/0qhxga3i383zh.js","/mathex/_next/static/chunks/0vv3t685s0kvs.js"],"default"]
+6:I[54439,["/mathex/_next/static/chunks/0w0sw--4uu27q.js","/mathex/_next/static/chunks/0m80jxcxmqkt4.js","/mathex/_next/static/chunks/0l4y30ghpviv0.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/mathex/_next/static/chunks/01~fk5y48dqv~.js","async":true}],["$","script","script-1",{"src":"/mathex/_next/static/chunks/0qhxga3i383zh.js","async":true}],["$","script","script-2",{"src":"/mathex/_next/static/chunks/0vv3t685s0kvs.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"UysnemmCz37nJmFC1zC5F"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/mathex/_next/static/chunks/01~fk5y48dqv~.js","async":true}],["$","script","script-1",{"src":"/mathex/_next/static/chunks/0qhxga3i383zh.js","async":true}],["$","script","script-2",{"src":"/mathex/_next/static/chunks/0vv3t685s0kvs.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Culy5DlIMydHK0TCWghw5"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null

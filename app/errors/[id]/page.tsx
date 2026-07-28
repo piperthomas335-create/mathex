@@ -10,17 +10,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { liShangdaErrors } from "@/lib/li-shangda-data"
+import { liGuobinErrors } from "@/lib/li-guobin-data"
 import { causeNames, sampleErrors } from "@/lib/sample-data"
 import { wangErrors } from "@/lib/student-data-provider"
 import { getDaysAgo } from "@/lib/utils"
 
 export function generateStaticParams() {
-  return [...liShangdaErrors, ...sampleErrors, ...wangErrors].map((e) => ({ id: e.id }))
+  return [...liShangdaErrors, ...sampleErrors, ...wangErrors, ...liGuobinErrors].map((e) => ({ id: e.id }))
 }
 
 export default async function ErrorDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const item = [...liShangdaErrors, ...sampleErrors, ...wangErrors].find((e) => e.id === id)
+  const item = [...liShangdaErrors, ...sampleErrors, ...wangErrors, ...liGuobinErrors].find((e) => e.id === id)
   if (!item) notFound()
 
   return (

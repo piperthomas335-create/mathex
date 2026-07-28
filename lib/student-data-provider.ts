@@ -1,5 +1,6 @@
 import { fullModuleStats } from "@/lib/full-tree-data"
 import { liShangdaErrors, liShangdaLessons } from "@/lib/li-shangda-data"
+import { liGuobinErrors, liGuobinLessons } from "@/lib/li-guobin-data"
 import { ErrorItem, sampleErrors } from "@/lib/sample-data"
 
 export type LessonItem = {
@@ -47,6 +48,7 @@ export const wangLessons: LessonItem[] = [
 export function getStudentErrors(studentId: string): ErrorItem[] {
   if (studentId === "std-001") return liShangdaErrors as unknown as ErrorItem[]
   if (studentId === "std-003") return wangErrors as unknown as ErrorItem[]
+  if (studentId === "std-004") return liGuobinErrors as unknown as ErrorItem[]
   return sampleErrors // std-002 徐同学
 }
 
@@ -55,12 +57,13 @@ export function getStudentErrorById(studentId: string, id: string): ErrorItem | 
   const found = list.find((e) => e.id === id)
   if (found) return found
   // fallback search across all students
-  return ([...liShangdaErrors, ...sampleErrors, ...wangErrors] as unknown as ErrorItem[]).find((e) => e.id === id)
+  return ([...liShangdaErrors, ...sampleErrors, ...wangErrors, ...liGuobinErrors] as unknown as ErrorItem[]).find((e) => e.id === id)
 }
 
 export function getStudentLessons(studentId: string): LessonItem[] {
   if (studentId === "std-001") return liShangdaLessons
   if (studentId === "std-003") return wangLessons
+  if (studentId === "std-004") return liGuobinLessons as unknown as LessonItem[]
   return xuLessons
 }
 
