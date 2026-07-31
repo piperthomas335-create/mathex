@@ -1,0 +1,7 @@
+:HL["/mathex/_next/static/chunks/0s~hfq27gtrzo.css","style"]
+:HL["/mathex/_next/static/chunks/07qj8dedupvb7.css","style"]
+:HL["/mathex/_next/static/chunks/12lqe75518ysy.css","style"]
+:HL["/mathex/_next/static/media/f112ed7f0b91582f-s.p.0xqqmnf1a3x8p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/mathex/_next/static/media/feb57b2dc8f29018-s.p.13c9k6c3vhklu.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/notes/20260715_E0008_题目.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"errors","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"E0008","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"UysnemmCz37nJmFC1zC5F"}
